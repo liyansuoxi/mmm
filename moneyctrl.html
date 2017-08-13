@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/money_list.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <header>
+        <a class="back  icon-angle-left" href="./index.html"></a>
+        <span>省钱控-最新优惠</span>
+        <a class="header_app" href="javascript:;"></a>
+    </header>
+    <!-- 网页主体 -->
+    <main>
+        <div class="container">
+
+            <ul class="total_goods" id="total_goods">
+                <div class="load_state icon-spinner icon-spin">
+                </div>
+            </ul>
+        </div>
+    </main>
+    <!--网页底部  -->
+     <!-- 底部栏 -->
+        <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+    <!--app下载固定  -->
+    <div class="app_load">
+        <img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt="">
+    </div>
+
+</body>
+
+</html>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/scrollTop.js"></script>
+<script type="text/html" id="template">
+    {{each result}}
+    <li data-id="{{$value.productId}}" class="goods_info">
+        <a class="clearfix" href="./money_datial.html?productid={{$value.productId}}">
+            <div class="pic">
+                {{@$value.productImg2}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{$value.productName}}
+                    <span class="pirce">{{$value.productPinkage}}</span>
+                </div>
+                <div class="others clearfix">
+                    <div class="shop_adress fl">{{$value.productFrom}} | {{$value.productTime}}</div>
+                    <div class="comment fr">
+                        <span class="icon icon-comments-alt"></span> 0
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="./js/money_list.js"></script>
+
+<script src="./js/back_top.js"></script>
+<script>
+    var move = new Back_top();
+
+</script>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- 默认用 ie-edge 打开 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
+    <title>慢慢买-全网比价*折扣</title>
+
+    <!-- 配置信息 -->
+    <script src="./js/config.js"></script>
+
+    <!-- 工具包 -->
+    <script src="./js/common.js"></script>
+
+    <!-- 渲染页面需要的请求发送请求 -->
+    <script>
+        // 缓存机制
+        window.cache = createCache();
+
+        // 产品详细信息
+        var def = '{"categoryid":0,"brandName":"乐视","productCom":"评论(2286)","productImg":"\<img src=\'http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png\' alt=\'乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视\' width=\'100\' height=\'100\'\>","productName":"乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视","productPrice":"￥1999.00","productQuote":"报价(6)"}';
+        var curProduct = window.localStorage.getItem("curProduct") ? JSON.parse(window.localStorage.getItem("curProduct").trim()) : JSON.parse(def);
+
+        // 发送请求
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", _URL.productDetail + "?productid=" + (getQueryString("productId") || 1));
+        xhr.send(null);
+
+        xhr.onload = function (data) {
+            // 缓存数据-评论信息
+            window.cache("data", JSON.parse(data.currentTarget.responseText.trim()));
+        };
+
+        // 发送请求 根据id获取分类名
+        var xhr_2 = new XMLHttpRequest();
+        xhr_2.open("get", _URL.classifyName + "?categoryid=" + curProduct.categoryid);
+        xhr_2.send(null);
+
+        xhr_2.onload = function (data) {
+
+            // 缓存数据
+            window.cache("classifyName", JSON.parse(data.currentTarget.responseText.trim()));
+        };
+    </script>
+
+    <!-- 字体样式 -->
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <!-- 主要 -->
+    <link rel="stylesheet" href="./css/category_detail.css" />
+    <link rel="stylesheet" href="./css/com.css">
+
+    <!-- zepto 框架 -->
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/fx.js"></script>
+    <script src="./lib/zepto/fx_methods.js"></script>
+
+    <!-- template 插件 -->
+    <script src="./lib/template/template-web.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 最外层包裹层 -->
+    <div class="mmm-bj">
+
+        <!-- 头部 logo 栏 和 搜索栏 -->
+        <header>
+            <a class="header_logo" href="index.html"></a>
+            <a class="header_app" href="index.html"></a>
+        </header>
+        <div class="search">
+            <div class="search_inner">
+                <input type="text" name="search" value="" placeholder="请输入你想比价的商品">
+                <a href="javascript:;">搜索</a>
+            </div>
+        </div>
+
+        <!-- 面包屑导航栏 -->
+        <div class="bread-nav">
+            <ol class="clearfix">
+                <li class="b-item pull-left"><a href="./index.html" data-target="index">首页</a></li>
+                <li class="pull-left icon-angle-right"></li>
+                <li class="b-item pull-left"><a href="#" data-target="list">电视</a></li>
+                <li class="pull-left icon-angle-right"></li>
+                <li class="b-item pull-left"><a href="#" data-target="detail">乐视</a></li>
+            </ol>
+        </div>
+
+        <!-- 产品详细信息 -->
+        <div class="product-detail">
+            <div class="pd-pic"></div>
+            <div class="pd-detail">
+                <p class="txt p-nowrap"></p>
+                <p class="msg">
+                    <span class="left"></span>
+                    <span class="pull-right"></span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 比价信息 -->
+        <div class="product-bj-msg">
+
+            <!-- nav 导航栏 -->
+            <div class="pbm-nav container-fulid clearfix">
+                <ul class="row">
+                    <li class="bj-buy col-xs-4 active">
+                        <a href="javascript:void(0)">比价购买</a>
+                    </li>
+                    <li class="bj-para col-xs-4">
+                        <a href="javascript:void(0)">产品参数</a>
+                    </li>
+                    <li class="bj-msg col-xs-4">
+                        <a href="javascript:void(0)">优选评论</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 内容 -->
+            <div class="pbm-content">
+                <div class="bj-buy" data-target=".pbm-nam bj-buy">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/161.png" alt="" />
+                                    <span class="left">飞牛网 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7299.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/9.png" alt="" />
+                                    <span class="left">新蛋网 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7299.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/13.png" alt="" />
+                                    <span class="left">1号店 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>6999.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/3.png" alt="" />
+                                    <span class="left">当当 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7100.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/161.png" alt="" />
+                                    <span class="left">飞牛网 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7299.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/9.png" alt="" />
+                                    <span class="left">新蛋网 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7299.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/1.png" alt="" />
+                                    <span class="left">京东商城 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7499.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/8.png" alt="" />
+                                    <span class="left">国美在线 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>6999.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/278.png" alt="" />
+                                    <span class="left">天猫旗舰店 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7599.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/4.png" alt="" />
+                                    <span class="left">中国亚马逊 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7699.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/309.png" alt="" />
+                                    <span class="left">华人方创 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>8399.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/13.png" alt="" />
+                                    <span class="left">1号店 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7599.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/1.png" alt="" />
+                                    <span class="left">京东商城 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7499.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/8.png" alt="" />
+                                    <span class="left">国美在线 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>6999.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="clearfix">
+                                <div class="pull-left">
+                                    <img src="./images/pbm-content-icon/278.png" alt="" />
+                                    <span class="left">天猫旗舰店 </span>
+                                    <span class="right">自营</span>
+                                </div>
+                                <div class="pull-right"><strong>¥</strong>7599.00</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bj-para" data-target=".pbm-nam bj-para">
+                    <ul class="clearfix"></ul>
+                </div>
+                <div class="bj-msg" data-target=".pbm-nam bj-msg">
+                    <ul class="clearfix"></ul>
+                </div>
+            </div>
+
+            <!-- 历史最低价 -->
+            <div class="min-price">
+                <p class="tit">该商品的历史最低价：6588.00&nbsp;&nbsp;&nbsp;></p>
+                <p class="txt">
+                    * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+                </p>
+            </div>
+        </div>
+
+        <!-- 最优评论 -->
+        <div class="best-msg">
+
+            <!-- 标题 -->
+            <div class="bm-tit">
+                <h3>优选网友评价</h3>
+            </div>
+
+            <!-- 留言 -->
+            <div class="bm-content">
+                <ul class="clearfix"></ul>
+            </div>
+
+            <!-- 加载更多 -->
+            <div class="bm-more">
+                <button class="more">查看跟多评价</button>
+            </div>
+        </div>
+
+        <!-- 广告栏-软件下载 -->
+        <div class="banner-app clearfix">
+            <a href="#">
+
+                <!-- logo -->
+                <div class="logo pull-left">
+                    <a href="javascript:void(0)">
+                    <img src="./images/bj_logo.png" alt=""/>
+                </a>
+                </div>
+
+                <!-- 内容 -->
+                <div class="content pull-left">
+                    <h2>慢慢买比价客户端</h2>
+                    <p>掌控价格不再买贵</p>
+                    <p>500万人正在使用</p>
+                </div>
+
+                <!-- 下载app -->
+                <div class="download pull-right">
+                    <button id="download-app" data-target="link">立即安装</button>
+                </div>
+            </a>
+            <!-- 关闭 -->
+            <a href="javascript:void(0)" class="close icon-remove" data-target="right"></a>
+        </div>
+
+        <!-- 底部栏 -->
+        <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+
+        <!-- 底部应用打开 -->
+        <div class="open-localapp">
+            <!-- 关闭 -->
+            <a href="javascript:void(0)" class="close icon-remove pull-left" data-target="bottom"></a>
+
+            <!-- logo -->
+            <div class="logo pull-left">
+                <img src="./images/bj_logo.png" alt="" />
+            </div>
+
+            <!-- 内容 -->
+            <div class="content pull-left">
+                <h2>慢慢买</h2>
+                <p>全网比价网,查历史价</p>
+            </div>
+
+            <!-- 本地应用打开 -->
+            <div class="download pull-right">
+                <a href="#" id="open-app" data-target="link">立即打开</a>
+            </div>
+        </div>
+
+        <!-- 返回顶部小火箭 -->
+        <div class="scrollTo" data-target="scrollTo">
+            <img src="./images/scrollTop.png" alt="" />
+        </div>
+
+    </div>
+
+
+    <!-- 评论模板 -->
+    <script type="text/html" id="msg">
+        {{each}}
+        <li>
+            <p class="user clearfix">
+                <span class="pull-left">{{$value.comName}}</span>
+                <span class="pull-right">{{$value.comTime}}</span>
+            </p>
+            <p class="star clearfix">
+                <span class="pull-left">★★★★★</span>
+                <span class="pull-right">{{$value.comFrom}}</span>
+            </p>
+            <p class="content">{{$value.comContent}}</p>
+            <p class="reply clearfix">
+                <span class="pull-left">回复</span>
+            </p>
+        </li>
+        {{/each}}
+    </script>
+
+
+    <!-- javascript 文件-->
+    <script src="./js/zp-category.js"></script>
+    <script src="./js/category_detail.js"></script>
+
+</body>
+
+</html>

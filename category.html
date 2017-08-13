@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- 默认用 ie-edge 打开 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <title>慢慢买-全网比价*折扣</title>
+
+    <!-- 工具包 -->
+    <script src="./js/common.js"></script>
+
+    <!-- 配置信息 -->
+    <script src="./js/config.js"></script>
+
+    <!-- 渲染页面需要的请求发送请求 -->
+    <script>
+        // 缓存机制
+        window.cache = createCache();
+
+        // 发送请求
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", _URL.classifyTitle);
+        xhr.send(null);
+
+        xhr.onerror = function () {
+            console.log("%c获取失败", "color: red; fontSize: 20px");
+        };
+        xhr.onload = function (data) {
+            // 缓存数据
+            window.cache("data", JSON.parse(data.currentTarget.responseText));
+        };
+    </script>
+
+    <!-- 字体样式 -->
+    <link rel="stylesheet" href="./css/font-awesome.min.css"/>
+    <!-- 主要 -->
+    <link rel="stylesheet" href="./css/category.css"/>
+
+    <!-- zepto 框架 -->
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/fx.js"></script>
+    <script src="./lib/zepto/fx_methods.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+
+    <!-- template 插件 -->
+    <script src="./lib/template/template-web.js"></script>
+
+</head>
+<body>
+
+<!-- 最外层包裹 -->
+<div class="mmm-bj">
+
+    <!-- 广告栏-软件下载 -->
+    <div class="banner-app clearfix">
+        <a href="#">
+
+            <!-- logo -->
+            <div class="logo pull-left">
+                <a href="javascript:void(0)">
+                    <img src="./images/bj_logo.png" alt=""/>
+                </a>
+            </div>
+
+            <!-- 内容 -->
+            <div class="content pull-left">
+                <h2>慢慢买比价客户端</h2>
+                <p>掌控价格不再买贵</p>
+                <p>500万人正在使用</p>
+            </div>
+
+            <!-- 下载app -->
+            <div class="download pull-right">
+                <button id="download-app" data-target="link">立即安装</button>
+            </div>
+        </a>
+        <!-- 关闭 -->
+        <a href="javascript:void(0)" class="close icon-remove" data-target="top"></a>
+    </div>
+
+    <!-- 头部 logo 栏 和 搜索栏 -->
+    <header>
+        <div class="logo">
+            <a href="javascript:void(0)">这里是logo</a>
+        </div>
+        <div class="search"></div>
+    </header>
+
+    <!-- 分类列表 -->
+    <div class="classifyTitle">
+        <ul class="list"></ul>
+    </div>
+
+    <!-- 波浪特效 -->
+    <div id="demo">
+    </div>
+
+    <!-- 底部栏 -->
+    <footer>
+        <div class="tools container-fulid clearfix">
+            <div class="row">
+                <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                <a href="javascript:void(0)" class="scrollTo col-xs-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>
+                <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 底部应用打开 -->
+    <div class="open-localapp">
+        <!-- 关闭 -->
+        <a href="javascript:void(0)" class="close icon-remove pull-left" data-target="bottom"></a>
+
+        <!-- logo -->
+        <div class="logo pull-left">
+            <img src="./images/bj_logo.png" alt=""/>
+        </div>
+
+        <!-- 内容 -->
+        <div class="content pull-left">
+            <h2>慢慢买</h2>
+            <p>全网比价网,查历史价</p>
+        </div>
+
+        <!-- 本地应用打开 -->
+        <div class="download pull-right">
+            <a href="" id="open-app" data-target="link">立即打开</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- javascript 文件-->
+<script src="./js/zp-category.js"></script>
+<script src="./js/category.js"></script>
+
+</body>
+</html>

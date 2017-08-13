@@ -1,0 +1,29 @@
+footer {
+  margin-top: .25rem;
+  padding-bottom: .25rem;
+  color: #5a5a5a;
+  background-color: #efefef;
+}
+footer .tools {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+footer .tools a {
+  box-sizing: border-box;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  padding: .1rem 0;
+  font-size: .14rem;
+}
+footer .tools a:last-of-type {
+  border-right: none;
+}
+footer .copyRight {
+  margin-top: .2rem;
+  text-align: center;
+  font-size: .12rem;
+}
+footer .copyRight p > a {
+  display: inline-block;
+  margin-top: .05rem;
+}

@@ -1,0 +1,118 @@
+@mmbOrange:orange;
+header {
+        height: .6rem;
+        width: 100%;
+        line-height: .6rem;
+        background: @mmbOrange;
+        overflow: hidden;
+        position: fixed;
+        border-bottom: 1px solid #e6e6e6;
+        top: .0;
+        z-index: 1;
+        a {
+            position: absolute;
+        }
+        .header_logo {
+            left: 0;
+            width: 3.7rem;
+            height: 100%;
+            background: url('../images/header_logo.png') no-repeat;
+            background-size: 100% 100%;
+            background-origin: content-box;
+            background-clip: content-box;
+            box-sizing: content-box;
+            padding: .12rem;
+            box-sizing: border-box;
+        }
+        .header_app {
+            right: 0;
+            height: .4rem;
+            width: .4rem;
+            background: url('../images/header_app.png') no-repeat;
+            background-size: 100% 100%;
+            background-origin: content-box;
+            background-clip: content-box;
+            box-sizing: content-box;
+            padding: .12rem;
+        }
+    }
+    .search {
+        background-color: #fff;
+        top: .6rem;
+        height: .6rem;
+        width: 100%;
+        border-bottom: 1px solid #e6e6e6;
+        box-sizing: border-box;
+        padding: 0.10rem;
+        position: fixed;
+        z-index: 1;
+        .search_inner {
+            height: .4rem;
+            border-radius: .2rem;
+            overflow: hidden;
+            position: relative;
+            input {
+                background-color: #f1f1f1;
+                text-indent: .2rem;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+            a {
+                position: absolute;
+                top: 0;
+                right: 0; 
+                width: 1.26rem;
+                height: .4rem;
+                line-height: .4rem;
+                text-align: center;
+                font-size: .20rem;
+                border-radius: .20rem;
+                background: @mmbOrange;
+                color: #fff;
+            }
+        } 
+    }
+
+     .footer_tool {
+        margin-top: .2rem; // margin-bottom: .64rem;
+        // position: fixed;
+        // bottom:0;
+        width: 100%; // z-index: 1;
+        background: #fff;
+        .tools { 
+            a {
+                box-sizing: border-box;
+                float: left;
+                width: 30%;
+                font-size: .28rem;
+                line-height: .68rem;
+                text-align: center;
+                border: 1px solid #c4c4c4;
+                border-left: none;
+                &:nth-of-type(3) {
+                    width: 40%;
+                    border-right: none;
+                }
+            }
+        }
+        .copyright {
+            background: #efefef;
+            text-align: center;
+            padding: .3rem 0;
+            font-size: .24rem;
+            color: #666;
+            p {
+                a {
+                    display: inline-block;
+                    &.app {
+                        color: red;
+                    }
+                }
+                &:nth-of-type(2) {
+                    line-height: .28rem;
+                }
+            }
+        }
+    }
+      

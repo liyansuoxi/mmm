@@ -1,0 +1,273 @@
+
+@import "zp_base.less";
+@import "media.less";
+
+
+@border-color: #c4c4c4;
+
+
+html, body {
+    height: 100%;
+    background-color: @color-14;
+}
+
+
+/* 最外层包裹层 */
+.mmm-bj {
+    font-size: .12rem;
+    height: 1000px;
+    position: relative;
+    background-color: #fff;
+}
+
+/* 面包屑导航栏 */
+.bread-nav {
+    height: .36rem;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: .36rem;
+    padding-left: .08rem;
+    font-size: .14rem;
+    margin-top: 1.2rem;
+
+    ol {
+        li a {
+            display: inline-block;
+        }
+        li.icon-angle-right {
+            margin-left: .05rem;
+            line-height: .36rem + .02rem;
+            font-weight: 100;
+        }
+    }
+}
+
+
+/* 产品详细信息 */
+.product-detail {
+    @imgH: 1.6rem;
+
+    .pd-pic {
+        position: relative;
+        height: @imgH;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: @imgH;
+            height: @imgH;
+            transform: translateX(-50%);
+        }
+    }
+
+    .pd-detail {
+        padding-left: .2rem;
+
+        p {
+            padding: .05rem 0;
+            font-size: .16rem;
+        }
+
+        p.msg {
+            font-size: .13rem;
+            padding-bottom: .2rem;
+            color: #575757;
+
+            span {
+                margin-right: .3rem;
+                color: #575757;
+            }
+        }
+    }
+}
+
+/* 比价信息 */
+.product-bj-msg {
+
+    /* nav 导航栏 */
+    .pbm-nav {
+        @border-color: #c14d00;
+
+        ul {
+            border-top: 1px solid @border-color;
+            border-bottom: 1px solid @border-color;
+
+            li {
+                box-sizing: border-box;
+                text-align: center;
+                background-color: #ffbb00;
+                background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#ffbb00));
+
+                border-right: 1px solid @border-color;
+
+                a {
+                    color: #fff;
+                    line-height: .34rem;
+                    font-size: .16rem;
+                }
+            }
+
+            li:last-of-type {
+                border-right: none;
+            }
+            
+            li.active {
+                background-color: #ffbb00;
+                background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff9000));
+            }
+        }
+    }
+
+    /* 内容 */
+    .pbm-content {
+        .bj-buy {
+            ul {
+                background-color: #fff;
+
+                li {
+                    border-bottom: 1px solid #e0e0e0;
+
+                    a {
+                        padding: .14rem .2rem;
+                        font-size: .14rem;
+                        box-sizing: content-box;
+
+                        .pull-left {
+                            color: #5a5a5a;
+
+                            img {
+                                width: .14rem;
+                                height: .14rem;
+                            }
+                            .right {
+                                font-size: .12rem;
+                                color: #999999;
+                            }
+                        }
+
+                        .pull-right {
+                            color: #fe0202;
+                        }
+                    }
+                }
+            }
+        }
+        .bj-para {}
+        .bj-msg {}
+    }
+
+    /* 历史最低价 */
+    .min-price {
+        margin-top: .3rem;
+        padding-left: .1rem;
+
+        p {
+            margin: .1rem 0;
+        }
+
+        .tit {
+            margin-top: .1rem;
+            font-size: .14rem;
+        }
+
+        .txt {
+            color: #888;
+        }
+    }
+}
+
+/* 最优评论 */
+.best-msg {
+    border-top: 4px solid #7a7a7a;
+    background-color: #fff;
+
+    /* 标题 */
+    .bm-tit {
+        h3 {
+            text-align: center;
+            font-weight: normal;
+            line-height: .34rem;
+            background-color: #dbdbdb;
+            font-size: .14rem;
+            letter-spacing: .02rem;
+        }
+    }
+
+    /* 留言 */
+    .bm-content {
+        ul {
+            li {
+                padding: .1rem .1rem 0;
+                color: #666;
+                line-height: .18rem;
+                border-bottom: 1px solid #f1f1f1;
+
+                .user {
+                    color: #999;
+                }
+
+                .star {
+                    font-size: .12rem;
+
+                    .pull-left {
+                        font-size: .18rem;
+                        color: @theme-color;
+                    }
+                }
+
+                .content {
+                    padding-top: .05rem;
+                    font-size: .14rem;
+                    line-height: .22rem;
+                    color: @color-10;
+                }
+
+                .reply {
+                    color: #999;
+                    font-size: .14rem;
+                    line-height: .22rem;
+                    padding-top: .05rem;
+                    padding-bottom: .05rem;
+                }
+            }
+        }
+    }
+
+    /* 加载跟多 */
+    .bm-more {
+        text-align: center;
+        padding: .2rem 0;
+        background-color: @color-14;
+
+        button {
+            width: 90%;
+            background-color: #d4d4d4;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+            border-bottom: 1px solid #bababa;
+            box-shadow: 0 0 1px #666;
+            color: #5a5a5a;
+            border-radius: .05rem;
+            font-size: .14rem;
+            line-height: .32rem;
+        }
+    }
+}
+
+/* 返回顶部小火箭 */
+.scrollTo {
+    @width: .4rem;
+
+    display: none;
+    position: fixed;
+    bottom: .6rem;
+    right: .2rem;
+
+    img {
+        width: @width;
+        height: @width;
+        border-radius: 30%;
+    }
+}

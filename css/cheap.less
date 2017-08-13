@@ -1,0 +1,332 @@
+@import 'cheap-base.less';
+//tab栏的初始化样式
+.active {
+    color: #e4393c;
+    border-bottom: 2px solid #e4393c;
+}
+
+//tab栏search框背景的切换
+.deselect {
+    width: 38px;
+    height: 38px;
+    background: url(../images/cheap-deselect.svg)no-repeat center center;
+    background-size: 22px auto;
+}
+
+//白菜价页面头部
+.cheap-head {
+    width: 100%;
+    height: 44px;
+    background-color: #e4393c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .cheap-head-inner {
+        width: 100%;
+        height: 100%;
+        padding: 0 .5rem;
+        position: relative;
+        .cheap-head-left {
+            width: 0.5rem;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            >a{
+                width: 100%;
+                height: 100%;
+                background: url(../images/cheap-head-left.svg)no-repeat center center;
+                background-size: 22px auto;
+            }
+        }
+        .cheap-head-center {
+            width: 100%;
+            height: 100%;
+           
+            h1 {
+                text-align: center;
+                line-height: 44px;
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+        .cheap-head-right {
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            >a{
+                width: 100%;
+                height: 100%;
+                background: url(../images/header_app.png)no-repeat center center;
+                background-size: 30px auto;
+            }
+        }
+    }
+}
+
+.cheap-nav {
+    width: 100%;
+    height: 39px;
+    position: relative;
+    padding-right: 38px;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 44px;
+    .cheap-nav-left {
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        overflow: hidden;
+        background-color: #fff; // line-height: 38px;
+        .nav-left-inner {
+            ul {
+                width: 640px;
+                li {
+                    font-size: 14px; // display: inline-block;
+                    float: left;
+                    a {
+                        height: 38px;
+                        display: inline-block;
+                        margin: 0 0.12rem;
+                    }
+                }
+            }
+        }
+    }
+    .cheap-nav-right {
+        width: 38px;
+        height: 38px;
+        border-left: 1px solid #e6e6e6;
+        background-color: #fbfbfb;
+        position: absolute;
+        top: 0;
+        right: 0;
+        .cheap-icon-search {
+            width: 38px;
+            height: 38px;
+            background: url(../images/cheap-search.svg)no-repeat center center;
+            background-size: 22px auto;
+        }
+    }
+}
+
+//搜素框
+.cheap-search {
+    width: 100%;
+    height: 0.6rem;
+    background-color: #f7f7f7;
+    box-shadow: 0px 3px 6px #dddddd;
+    padding: 0.12rem 0.12rem;
+    padding-right: 0.5rem;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    display: none;
+    .cheap-search-inner {
+        width: 100%;
+        height: 100%;
+        .search-inner-left {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #eeeeee;
+            .search-text {
+                padding: 0 26px;
+                font-size: 14px;
+                background: url(../images/cheap-icon-search.svg) no-repeat 10px center;
+                background-size: 16px 16px;
+                background-color: #ffffff;
+                outline: none;
+            }
+        }
+        .search-inner-right {
+            width: 30px;
+            height: 100%;
+            text-align: center;
+            line-height: .6rem;
+            position: absolute;
+            top: 0;
+            right: 0.05rem;
+            a {
+                width: 100%;
+                height: 100%;
+                font-size: 12px;
+            }
+        }
+    }
+} //广告区域
+.cheap-banner {
+    margin: .1rem 0;
+}
+
+//商品列表    
+.cheap-shop-list {
+    .cheap-container {
+        font-size: 14px;
+        margin: 0 auto;
+        .cheap-product-list {
+            .all-product {
+                height: 100%;
+                position: relative;
+                padding: 8px 0 8px 135px;
+                box-sizing: border-box;
+                overflow: hidden;
+                margin-bottom: 8px;
+                background-color: #fff;
+                .content-left {
+                    width: 130px;
+                    height: 130px;
+                    position: absolute;
+                    top: 8px;
+                    left: 4px;
+                    img {
+                        width: 130px;
+                        height: 130px;
+                    }
+                }
+                .content-right {
+                    width: 100%;
+                    float: left;
+                    padding: 0 0.05rem;
+                    .product-discoun {
+                        color: #fc353a;
+                        line-height: 30px;
+                        font-size: 24px;
+                        i {
+                            font-size: 16px;
+                            font-style: normal;
+                            margin-right: 0.05rem;
+                        }
+                        em {
+                            font: normal 12px normal;
+                        }
+                        del {
+                            color: #a8a8a8;
+                            font-size: 12px;
+                            margin-left: 10px;
+                        }
+                    }
+                    .product-progress {
+                        color: #fc565a;
+                        margin-top: 5px;
+                        position: relative;
+                        .progress {
+                            float: left;
+                            width: 100px;
+                            height: 16px;
+                            border: 1px solid red;
+                            border-radius: 10px;
+                            background-color: #ffb7b7;
+                            overflow: hidden;
+                            .progress-inner {
+                                height: 100%;
+                                border-radius: 10px;
+                                background-color: red;
+                            }
+                        }
+                        .bar {
+                            >i {
+                                >span {
+                                    font-style: normal;
+                                    font-size: 12px;
+                                    color: #fff;
+                                    position: absolute;
+                                    top: -1px;
+                                    left: 38px;
+                                }
+                            }
+                            >b {
+                                font-weight: normal;
+                                margin-left: 0.1rem;
+                                font-size: 0.14rem;
+                            }
+                        }
+                    }
+                    .get-coupon {
+                        margin-top: 18px;
+                        a {
+                            padding: 5px 5px;
+                            display: inline-block;
+                        }
+                        >a:first-child {
+                            color: #fc353a;
+                            border: 1px dashed #fc353a;
+                        }
+                        >a:last-child {
+                            float: right;
+                            background-color: #ff5e5d;
+                            border-radius: 5px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//小火箭
+.cheap-rocket {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #808080;
+    border-radius: 50%;
+    position: fixed;
+    right: 0.2rem;
+    bottom: 0.5rem;
+    z-index: 999;
+    display: none;
+    .cheap-rocket-inner {
+        width: 100%;
+        height: 100%;
+        background: url(../images/cheap-rocket.svg)no-repeat center center;
+        background-size: 22px auto;
+    }
+}
+//底部工具栏
+.footer_tool {
+    margin-top: .2rem;
+    // margin-bottom: .64rem;
+    // position: fixed;
+    // bottom:0;
+    width: 100%;
+    // z-index: 1;
+    background: #fff;
+    .tools {
+        a {
+            box-sizing: border-box;
+            float: left;
+            width: 30%;
+            font-size: .28rem;
+            line-height: .68rem;
+            text-align: center;
+            border: 1px solid #c4c4c4;
+            border-left: none;
+            &:nth-of-type(3) {
+                width: 40%;
+                border-right: none;
+            }
+        }
+    }
+
+    .copyright {
+        background: #efefef;
+        text-align: center;
+        padding: .3rem 0;
+        font-size: .24rem;
+        color: #666;
+        p {
+            a {
+                display: inline-block;
+                &.app {
+                    color: red;
+                }
+            }
+            &:nth-of-type(2) {
+                line-height: .28rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+
+/* 以 640 视口作为设计稿 */
+
+@import "media.less";
+@import "zp_base.less";
+
+         
+html, body {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+
+
+/* 最外层包裹层 */
+.mmm-bj {
+    font-size: .12rem;
+}
+
+/* 头部 logo 栏 */
+header {
+    /* logo 栏 */
+    .logo {
+        height: .5rem;
+        border-bottom: 1px solid black;
+        background-color: @color-10;
+    }
+
+    /* 搜索栏 */
+    .search {
+        height: .3rem;   
+        padding: .1rem;
+        border-bottom: 1px solid #e6e6e6;
+        background-color: @color-12; 
+    }
+}
+
+/* 分类列表 */
+.classifyTitle {
+    -moz-box-sizing: border-box;
+    background-color: #ebebeb;
+    padding: .05rem;
+
+    ul.list {
+        border: 1px solid #ccc;
+        border-radius: .05rem;
+        
+        li.item {
+
+            a {
+                @height: .3rem;
+
+                box-sizing: border-box;
+                display: block;
+                height: @height;
+                line-height: @height;
+                padding-left: .16rem;
+                font-size: .16rem;
+                font-weight: 700;
+                border-bottom: 1px solid #ccc;
+                position: relative;
+
+                span {
+                    box-sizing: border-box;
+                    display: block;
+                    height: @height;
+                    float: right;
+                    margin-right: .03rem;
+                    line-height: @height - .05rem;
+                }
+                span.icon-sort-up {
+                    /* 解决不能居中的蠢办法 */
+                    padding-top: .06rem;
+                }
+            }
+
+            /* 加载中 */
+            .loading {
+                border-bottom: 1px solid #ccc;
+            }
+            
+            ul {
+                display: none;
+                background-color: #f9f9f9;
+
+                li {
+                    height: .4rem;
+                    box-sizing: border-box;
+                    border-right: 1px solid #ccc;
+                    text-align: center;
+
+                    a {
+                        height: 100%;
+                        line-height: .4rem;
+                        color: #333;
+                    }
+                }
+                li:nth-of-type(3n) {
+                    border-right: none;
+                }
+            }
+
+            ul.active {
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* 波浪动画 */
+@line_w: 3px;
+@line_m: 3px;
+@line_h: 8px;
+
+footer {
+    margin-top: 0;
+}
+
+#demo {
+    -moz-box-sizing: border-box;
+    width: 95%;
+    height: .5rem;
+    padding: .2rem 0;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    .line {
+        width: @line_w;
+        height: @line_h;
+        border-radius: @line_w / 2;
+        background-color: @color-14;
+        position: absolute;
+        transition: top .08s;
+        z-index: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

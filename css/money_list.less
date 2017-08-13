@@ -1,0 +1,196 @@
+@import "media.less";
+@import "base.less";
+
+
+/*定义模板颜色*/
+@common_color: #ff841d;  
+
+/* 省钱控---界面 */
+/* 头部 */
+
+header {
+    height: 1rem;
+    width: 100%;
+    line-height: 1rem;
+    font-size: 0.42rem;
+    text-align: center;
+    color: #fff;
+    background: @common_color;
+    overflow: hidden;
+    position: fixed;
+    border-bottom: 1px solid #e6e6e6;
+    top: .0;
+    z-index: 1;
+    a {
+        position: absolute;
+    }    
+    .back{
+        top: 0;
+        left: 0;
+        width: 1rem;
+        text-align: center;        
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    .header_app {
+        right: 0;
+        top: 0;
+        height: .6rem;
+        width: .6rem;
+        background: url('../images/header_app.png') no-repeat;
+        background-size: 100% 100%;
+        background-origin: content-box;
+        background-clip: content-box;
+        margin: .2rem;
+    }
+
+
+}
+/* 页面主题 */
+main {
+    width: 100%;
+    .container{
+        padding: 1rem 0 0 0.2rem;
+        ul{
+            position: relative;
+            .load_state{
+                width: 15px;    
+                height: 15px;
+                font-size: 0.3rem;
+                // background-color: yellow;            
+                position: absolute;
+                top: -25px;
+                left: 50%;
+            }
+            li{
+                height: 2rem;
+                padding: 0.2rem 0.2rem;
+                
+                a{
+                    /* 图片区域 */
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .pic{
+                        position: absolute;
+                        top: 0;                        
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                    /* 右侧信息区域 */
+                    .info{
+                        width: 100%;
+                        padding-left: 1.6rem;
+                        /* 信息标题 */
+                        .title{
+                            font-size: 0.26rem;
+                            height: 1.1rem;
+                            .pirce{
+                                color: #ff6c00;
+                            }
+                        }      
+                        /*其他信息*/
+                        .others{
+                            font-size: 0.22rem;
+                            padding-top: 0.05rem;
+                            color: #a1a1a1;
+                            .shop_adress{
+                                float:left;
+                            }
+                            .comment{
+                                float: right;
+                                .icon{
+                                           
+                                }
+                            }
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+/*页面底部*/
+
+footer{
+    width: 100%;
+    background-color: #f6f6f6;
+    font-size: 0.26rem;
+    .step_link{
+        padding: 1px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;       
+        a{     
+            // float: left;     
+            padding:0.2rem 0 0.2rem 0.08rem;
+            background-color: #f3f3f3;
+            font-size: 0.24rem;  
+            display: inline-block;  
+            vertical-align: middle;        
+            
+        }  
+        .current_page{
+            width: 4rem;
+            overflow: hidden;
+            white-space: nowrap;
+            
+        }
+    }
+    .load_choose{
+        margin-top: 0.3rem;
+        text-align: center;
+        font-size: 0.3rem;
+        line-height: 0.8rem;
+        border-top: 2px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        div{
+            float: left;
+            width: 30%;
+            border-right: 1px solid #ccc;
+            
+        }
+        .back_top{
+            width: 40%;
+            .top_icon{
+                font-size: 0.3rem;
+                color: #5a5a5a;
+            }
+        }
+    }
+    .app_adverment{
+        padding: 0.5rem 0;
+        font-size: 0.26rem;
+        text-align: center;
+        a{
+            display: inline-block;
+        }
+        a:nth-child(1){
+            color: red;
+        }
+        a:nth-child(2){
+            color: #666;
+        }
+    }
+}
+.app_load{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 1100;
+    right: 10px;
+    bottom: 40px;
+    img{
+        width: 100%;
+        display: block;
+    }
+}

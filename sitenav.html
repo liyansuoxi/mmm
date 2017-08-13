@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sitenav.css">
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    
+    <script src="./lib/template/template-web.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <a class="header_logo" href="javascript:;"></a>
+        <a class="header_app" href="javascript:;"></a>
+    </header>
+    <div class="result">
+            <div class="study">
+
+            </div>
+    </div>
+    <div class="siteNav-foot">
+            <a href="./index.html">首页</a>
+            <a href="javascript:;">></a>
+            <a href="">商城导航</a>
+    </div>
+</body>
+
+</html>
+<script type='text/html' id="template">
+    <!--内容区域-->
+    {{each result}}
+    <ul class='item'>
+        <li>
+            <a href="{{$value.navHref}}" target='_blank'>
+                    <img src="{{$value.navImg}}" alt="">
+                    {{$value.navTitle}}
+                </a>
+        </li>
+    </ul>
+    {{/each}}
+</script>
+<script>
+    $(function () {
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getsitenav',
+            success: function (data) {
+                $('.study').append(template('template', data))
+            }
+        })
+
+    })
+</script>

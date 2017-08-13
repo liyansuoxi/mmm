@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./css/inlanddiscountDetail.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <div class="DD-Detail-container">
+        <!-- 详情部分开始  -->
+        <div class="detail-content">
+            <h3 class="con-title">freeplus 芙丽芳丝 净润洗面霜 100g*2</h3>
+            <h4>￥159.00</h4>
+            <div class="con-info">
+                <span class="con-mall">中国亚马逊</span>
+                <span class="con-addtime" style="margin-right: 4px;">08-03 09:47</span>
+                <span class="con-author">jxh_chen/ 慢慢买</span>
+            </div>
+            <div class="detail-show clearfix">
+                <div class="con-picwrap">
+                    <img src="http://wnzk-img.zuyushop.com/r_img/img/20170803/09/3260e9e0c3a942d4884ea769011e3331.jpg" alt="freeplus 芙丽芳丝 净润洗面霜 100g*2">
+                </div>
+                <div class="conn">
+                    <p class="sum">目前中亚该款freeplus芙丽芳丝净润洗面霜100g＊2支特价￥159，折合80元一支。</p>
+                    <p class="sum">大名鼎鼎的芙丽芳丝氨基酸洗面奶，各种大奖拿到手软，口碑也是杠杠的，基本上每次有人问到“平价又好用的洗面奶”，最赞一定是这货。Freeplus 芙丽芳丝是日本Kanebo化妆品旗下的，日本原装进口药妆护肤品牌，freeplus芙丽芳丝净润洗面霜100g
+                        严格选取不给肌肤添加负担的优质而低刺激的原料，弱酸性的成分，泡沫非常丰富，清除肌理间的污垢，且配合保湿成分，能够充分保护易干燥肌肤的滋润，打造健康角质层。
+                    </p>
+                    <p>&nbsp; &nbsp;&nbsp;</p>
+                    /div>
+                </div>
+                <div class="golink">
+                    <a href="redirect.aspx?tjid=1735517&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a>
+                </div>
+            </div>
+        </div>
+        <!--详情部分结束  -->
+
+        <!--评论部分开始  -->
+        <div class="detail-comment">
+            <div class="tit">发表评论</div>
+            <div class="reply">
+                <div class="form">
+                    <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                    <input name="ctl00$ContentBody$lbl_fbr" type="hidden" id="ctl00_ContentBody_lbl_fbr" value="手机端网友183***70">
+                    <input name="ctl00$ContentBody$hid_name" type="hidden" id="ctl00_ContentBody_hid_name" value="freeplus 芙丽芳丝 净润洗面霜 100g*2">
+                    <div class="ctrl">
+                        <input type="submit" name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp">
+                    </div>
+                </div>
+            </div>
+            <div class="tit" id="newcomment">最新评论</div>
+            <div class="list">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+        <!--评论部分结束   -->
+    </div>
+    <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+    <script type="text/html" id="DD-detail-template">
+        {{each result}}
+        <div class="detail-content">
+            <h3 class="con-title">{{$value.productName}}</h3>
+            <h4>{{$value.productPrice}}</h4>
+            <div class="con-info">
+                <span class="con-mall">{{$value.productFrom}}</span>
+                <span class="con-addtime" style="margin-right: 4px;">{{$value.productTime}}</span>
+                <span class="con-author">{{$value.productTips}}</span>
+            </div>
+            <div class="detail-show clearfix">
+                <div class="con-picwrap">
+                    {{@$value.productImg}}
+                </div>
+                <div class="conn">
+                    <!--内容开始-->
+                    <!-- <p class="sum">{{$value.productName}}</p> -->
+                    <p class="sum">{{$value.productInfo}}</p>
+                    <p>&nbsp; &nbsp;&nbsp;</p>
+                    <!--内容结束-->
+                </div>
+            </div>
+            <div class="golink">
+                <a href="redirect.aspx?tjid=1735517&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a>
+            </div>
+        </div>
+        <div class="MMB-WeChat">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+        <div class="detail-comment">
+            {{@$value.productComment}}
+        </div>
+
+        {{/each}}
+
+    </script>
+    <script src="./js/template-web.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./js/scrollTop.js"></script>
+    <script>
+        $(function () {
+            var str = window.location.search.toLowerCase() || "?productid=0"; // console.log(str);
+            $.ajax({
+                url: "http://139.199.192.48:9090/api/getdiscountproduct" + str,
+                success: function (data) {
+                    console.log(data);
+                    $(".DD-Detail-container").html(template("DD-detail-template", data));
+                }
+            });
+
+            function addComment(){
+                $("#ctl00_ContentBody_Button1").click(function(){
+                    var newLi = document.createElement("li");
+                    newLi.innerHTML = '<div class="userimg"><img src="http://apapia_userface.manmanbuy.com/images/userface/2017051910010877.jpg"></div><div class="con"><div class="name clearfix"><div class="username">'+$("#ctl00_ContentBody_lbl_fbr").val()+'</div> <div class="time">2017/8/4 16:20:29</div></div><div class="content">'+$("#ctl00_ContentBody_txt_nr").val()+'</div></div>'
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

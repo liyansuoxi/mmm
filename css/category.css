@@ -1,0 +1,2629 @@
+/* 以 640 视口作为设计稿 */
+/* 模拟 boostrap 栅栏系统 */
+/* 媒体查询设置 */
+/* 担心有些ie浏览器 不识别 媒体查询 only   */
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 168.75px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-md-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-md-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-md-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-md-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-md-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-md-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-md-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-md-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-md-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-md-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-md-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-md-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-md-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-md-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-md-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-md-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  html,
+  body {
+    font-size: 150px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html,
+  body {
+    font-size: 125px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  html,
+  body {
+    font-size: 112.5px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html,
+  body {
+    font-size: 93.75px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px) {
+  html,
+  body {
+    font-size: 84.375px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html,
+  body {
+    font-size: 75px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 414px), only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 64.6875px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 62.5px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 375px), only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 58.59375px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 360px), only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 56.25px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 50px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 240px), only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (width: 6.4rem) {
+  html {
+    font-size: 1rem;
+  }
+  /* 版心布局 */
+  .container .row::after,
+  .container .row::before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  .container .row::after {
+    clear: both;
+  }
+  .container .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  /* 流体布局 */
+  .container-fulid .row .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .container-fulid .row .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+}
+/* 页面主题色 */
+/* 去除 padding margin */
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+ol {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  font: 0.12rem "Microsoft Yahei";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  /* 清除移动端高亮 */
+  line-height: normal;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+  /* 解决不能使用 swipe 的问题 */
+  touch-action: none;
+}
+li,
+ol {
+  list-style: none;
+}
+input,
+button {
+  outline: none;
+  border-style: none;
+}
+button {
+  border-style: none;
+}
+/* 解决 3px 留白问题 */
+img {
+  vertical-align: middle;
+}
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+}
+.clearfix::after {
+  clear: both;
+}
+/* 设置字体颜色 */
+.red {
+  color: red;
+}
+/* 不换行 + 省略号 */
+.p-nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 绝对定位居中 */
+.postion-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*=======================公共部分============================*/
+/* 广告栏 */
+.banner-app {
+  background-color: #434343;
+  font-size: .12rem;
+  padding: .1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* logo */
+  /* 中间文字部分 */
+  /* 右边下载按钮 */
+  /* 关闭按钮 */
+}
+.banner-app .logo a img {
+  width: .6rem;
+  height: .6rem;
+  margin-top: .03rem;
+}
+.banner-app .content {
+  padding-left: .1rem;
+}
+.banner-app .content h2 {
+  padding-top: .03rem;
+  color: #fff;
+  font-size: .16rem;
+  font-weight: normal;
+}
+.banner-app .content p {
+  margin: .05rem 0;
+  color: #fee6c2;
+}
+.banner-app .download #download-app {
+  padding: .06rem .1rem;
+  background-color: #6db110;
+  border-radius: .04rem;
+  color: #fff;
+  position: absolute;
+  right: .1rem;
+  bottom: .1rem;
+  font-size: .14rem;
+}
+.banner-app a.close {
+  width: .2rem;
+  height: .2rem;
+  background-color: black;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+  font-size: .12rem;
+  text-align: center;
+  text-indent: .005rem;
+  line-height: .2rem;
+}
+/* 头部 logo 栏 */
+header {
+  /* logo 栏 */
+  /* 搜索栏 */
+}
+header .logo {
+  height: .5rem;
+  border-bottom: 1px solid black;
+  background-color: #414a4e;
+}
+header .search {
+  box-sizing: content-box;
+  height: .3rem;
+  padding: .1rem;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #a1aaae;
+}
+/* 底部栏 */
+footer {
+  margin-top: .25rem;
+  padding-bottom: .25rem;
+  color: #5a5a5a;
+  background-color: #efefef;
+}
+footer .tools {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+footer .tools a {
+  box-sizing: border-box;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  padding: .1rem 0;
+  font-size: .14rem;
+}
+footer .tools a:last-of-type {
+  border-right: none;
+}
+footer .copyRight {
+  margin-top: .2rem;
+  text-align: center;
+}
+footer .copyRight p > a {
+  display: inline-block;
+  margin-top: .05rem;
+}
+/* 底部应用打开 */
+.open-localapp {
+  box-sizing: border-box;
+  width: 100%;
+  height: 0.6rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #faf8f5;
+  padding-top: 0.095rem;
+  /* 关闭按钮 */
+  /* applogo 和 打开按妞 */
+  /* 中间文字部分 */
+  /* 立即打开 */
+}
+.open-localapp a.pull-left {
+  box-sizing: content-box;
+  width: .21rem;
+  height: .21rem;
+  padding: 0.095rem 0.12rem 0.2rem 0.12rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-origin: content-box;
+  background-clip: content-box;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: .21rem;
+}
+.open-localapp .logo img {
+  width: .41rem;
+  height: .41rem;
+}
+.open-localapp .content {
+  padding-left: .1rem;
+  color: #888;
+  line-height: .20rem;
+}
+.open-localapp .content h2 {
+  font-weight: normal;
+  font-size: .18rem;
+}
+.open-localapp .content p {
+  font-size: .12rem;
+}
+.open-localapp #open-app {
+  width: auto;
+  height: 0.25rem;
+  display: block;
+  padding: 0 .05rem;
+  margin-top: .06rem;
+  margin-right: .05rem;
+  background-color: #ff7700;
+  box-shadow: inset 0 -2px #ff5500;
+  border-radius: .04rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.25rem;
+  font-size: .12rem;
+}
+/* 加载中动画 */
+.loading {
+  display: none;
+  width: 100%;
+  padding: 0 .2rem;
+  margin: auto;
+  overflow: hidden;
+  height: 0.36rem;
+}
+.loading .filter-mix {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 0.36rem;
+}
+.loading .filter-mix::before {
+  content: "";
+  position: absolute;
+  width: 0.26rem;
+  height: 0.26rem;
+  border-radius: 50%;
+  background: #19a4e1;
+  top: 0.05rem;
+  left: 0;
+  z-index: 3;
+  box-sizing: border-box;
+  animation: filterBallMove 10s ease-out infinite;
+}
+.loading .filter-mix::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: #ef553b;
+  top: 0.08rem;
+  right: 0;
+  z-index: 2;
+  animation: filterBallMove2 10s ease-out infinite;
+}
+@keyframes filterBallMove {
+  50% {
+    left: 85%;
+  }
+  to {
+    z-index: 2;
+  }
+}
+@keyframes filterBallMove2 {
+  50% {
+    right: 85%;
+  }
+  to {
+    z-index: 3;
+  }
+}
+html,
+body {
+  height: 100%;
+  background-color: #f2f2f2;
+}
+/* 最外层包裹层 */
+.mmm-bj {
+  font-size: .12rem;
+}
+/* 头部 logo 栏 */
+header {
+  /* logo 栏 */
+  /* 搜索栏 */
+}
+header .logo {
+  height: .5rem;
+  border-bottom: 1px solid black;
+  background-color: #414a4e;
+}
+header .search {
+  height: .3rem;
+  padding: .1rem;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #a1aaae;
+}
+/* 分类列表 */
+.classifyTitle {
+  -moz-box-sizing: border-box;
+  background-color: #ebebeb;
+  padding: .05rem;
+}
+.classifyTitle ul.list {
+  border: 1px solid #ccc;
+  border-radius: .05rem;
+}
+.classifyTitle ul.list li.item {
+  /* 加载中 */
+}
+.classifyTitle ul.list li.item a {
+  box-sizing: border-box;
+  display: block;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  padding-left: .16rem;
+  font-size: .16rem;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.classifyTitle ul.list li.item a span {
+  box-sizing: border-box;
+  display: block;
+  height: 0.3rem;
+  float: right;
+  margin-right: .03rem;
+  line-height: 0.25rem;
+}
+.classifyTitle ul.list li.item a span.icon-sort-up {
+  /* 解决不能居中的蠢办法 */
+  padding-top: .06rem;
+}
+.classifyTitle ul.list li.item .loading {
+  border-bottom: 1px solid #ccc;
+}
+.classifyTitle ul.list li.item ul {
+  display: none;
+  background-color: #f9f9f9;
+}
+.classifyTitle ul.list li.item ul li {
+  height: .4rem;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+.classifyTitle ul.list li.item ul li a {
+  height: 100%;
+  line-height: .4rem;
+  color: #333;
+}
+.classifyTitle ul.list li.item ul li:nth-of-type(3n) {
+  border-right: none;
+}
+.classifyTitle ul.list li.item ul.active {
+  display: block;
+}
+/* 波浪动画 */
+footer {
+  margin-top: 0;
+}
+#demo {
+  -moz-box-sizing: border-box;
+  width: 95%;
+  height: .5rem;
+  padding: .2rem 0;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+#demo .line {
+  width: 3px;
+  height: 8px;
+  border-radius: 1.5px;
+  background-color: #eceff1;
+  position: absolute;
+  transition: top .08s;
+  z-index: 0;
+}

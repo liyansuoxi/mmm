@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="" href="./css/cheap.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/com.css">
+</head>
+<script>
+
+</script>
+
+<body>
+
+    <!--白菜价页面头部-->
+    <header class="cheap-head clearfix">
+        <div class="cheap-head-inner">
+            <div class="cheap-head-left">
+                <a href="./index.html">
+                    
+                </a>
+            </div>
+            <div class="cheap-head-center">
+                <h1>
+
+                    白菜价-淘宝内部券
+                </h1>
+
+            </div>
+            <div class="cheap-head-right">
+                <a href="http://m.manmanbuy.com/?o=download"></a>
+            </div>
+        </div>
+    </header>
+    <!--白菜价页面导航栏-->
+    <nav class="cheap-nav">
+        <div class="cheap-nav-left">
+            <div class="nav-left-inner" id="wrapper">
+                <ul class="cheap-menu clearfix">
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="cheap-nav-right show">
+            <div class="cheap-icon-search">
+
+            </div>
+        </div>
+
+    </nav>
+    <!--隐藏的搜索框-->
+    <div class="cheap-search ">
+        <div class="cheap-search-inner">
+            <div class="search-inner-left">
+                <input class="search-text" type="text" name="" placeholder="搜索商品即可查内部券">
+            </div>
+            <div class="search-inner-right">
+                <a href="javascript:;">搜索</a>
+            </div>
+        </div>
+    </div>
+    <!--广告模块-->
+    <div class="cheap-banner">
+        <img src="./images/cheap_banner_wap.png" alt="">
+    </div>
+    <!--商品列表-->
+    <div class="cheap-shop-list">
+        <div class="cheap-container">
+            <ul class="cheap-product-list">
+
+            </ul>
+        </div>
+    </div>
+    <!--小火箭返回顶部-->
+    <div class="cheap-rocket">
+        <div class="cheap-rocket-inner">
+
+        </div>
+    </div>
+    <!--底部工具栏-->
+     <div class="footer_tool">
+        <div class="tools clearfix">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="">返回顶部</a>
+        </div>
+        <div class="copyright">
+            <p><a class="app">手机APP下载</a><a>慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div> 
+    <!-- <footer>
+        <div class="tools container-fulid clearfix">
+            <div class="row">
+                <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>
+                <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+        </div>
+    </footer> -->
+</body>
+
+</html>
+<script type="text/html" id="template">
+    {{each result}}
+    <li id={{$value.titleId}}><a href="javascript:;">{{$value.title}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="template1">
+    {{each result}}
+
+    <li class="all-product">
+        <div class="product-content clearfix">
+            <div class="content-left">
+                {{@$value.productImg}}
+            </div>
+            <div class="content-right">
+                <div class="product-title">
+                    {{@$value.productName}}
+                </div>
+                <div class="product-discoun">
+                    {{@$value.productPrice}}
+                </div>
+                <div class="product-progress">
+                    <div class='progress'>
+                        <div class='progress-inner' width='50px'>
+                        </div>
+                    </div>
+                    {{@$value.productCouponRemain}}
+                </div>
+                <div class="get-coupon">
+                    {{@$value.productCoupon}} {{@$value.productHref}}
+                </div>
+            </div>
+        </div>
+    </li>
+
+    {{/each}}
+</script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/touch.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./lib/zepto/iscroll.js"></script>
+<script src="./js/baicaijia.js"></script>    

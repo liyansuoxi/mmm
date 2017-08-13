@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  background-color: #f7f7f7;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+/* 担心有些ie浏览器 不识别 媒体查询 only   */
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 168.75px;
+  }
+}
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  html,
+  body {
+    font-size: 150px;
+  }
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html,
+  body {
+    font-size: 125px;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  html,
+  body {
+    font-size: 112.5px;
+  }
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html,
+  body {
+    font-size: 93.75px;
+  }
+}
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px) {
+  html,
+  body {
+    font-size: 84.375px;
+  }
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html,
+  body {
+    font-size: 75px;
+  }
+}
+@media only screen and (max-width: 414px), only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 64.6875px;
+  }
+}
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 62.5px;
+  }
+}
+@media only screen and (max-width: 375px), only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 58.59375px;
+  }
+}
+@media only screen and (max-width: 360px), only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 56.25px;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 240px), only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+}
+@media screen and (width: 6.4rem) {
+  html {
+    font-size: 1rem;
+  }
+}
+.active {
+  color: #e4393c;
+  border-bottom: 2px solid #e4393c;
+}
+.deselect {
+  width: 38px;
+  height: 38px;
+  background: url(../images/cheap-deselect.svg) no-repeat center center;
+  background-size: 22px auto;
+}
+.cheap-head {
+  width: 100%;
+  height: 44px;
+  background-color: #e4393c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.cheap-head .cheap-head-inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 .5rem;
+  position: relative;
+}
+.cheap-head .cheap-head-inner .cheap-head-left {
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cheap-head .cheap-head-inner .cheap-head-left > a {
+  width: 100%;
+  height: 100%;
+  background: url(../images/cheap-head-left.svg) no-repeat center center;
+  background-size: 22px auto;
+}
+.cheap-head .cheap-head-inner .cheap-head-center {
+  width: 100%;
+  height: 100%;
+}
+.cheap-head .cheap-head-inner .cheap-head-center h1 {
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.cheap-head .cheap-head-inner .cheap-head-right {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cheap-head .cheap-head-inner .cheap-head-right > a {
+  width: 100%;
+  height: 100%;
+  background: url(../images/header_app.png) no-repeat center center;
+  background-size: 30px auto;
+}
+.cheap-nav {
+  width: 100%;
+  height: 39px;
+  position: relative;
+  padding-right: 38px;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 44px;
+}
+.cheap-nav .cheap-nav-left {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.cheap-nav .cheap-nav-left .nav-left-inner ul {
+  width: 640px;
+}
+.cheap-nav .cheap-nav-left .nav-left-inner ul li {
+  font-size: 14px;
+  float: left;
+}
+.cheap-nav .cheap-nav-left .nav-left-inner ul li a {
+  height: 38px;
+  display: inline-block;
+  margin: 0 0.12rem;
+}
+.cheap-nav .cheap-nav-right {
+  width: 38px;
+  height: 38px;
+  border-left: 1px solid #e6e6e6;
+  background-color: #fbfbfb;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cheap-nav .cheap-nav-right .cheap-icon-search {
+  width: 38px;
+  height: 38px;
+  background: url(../images/cheap-search.svg) no-repeat center center;
+  background-size: 22px auto;
+}
+.cheap-search {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #f7f7f7;
+  box-shadow: 0px 3px 6px #dddddd;
+  padding: 0.12rem 0.12rem;
+  padding-right: 0.5rem;
+  position: absolute;
+  top: 82px;
+  left: 0;
+  display: none;
+}
+.cheap-search .cheap-search-inner {
+  width: 100%;
+  height: 100%;
+}
+.cheap-search .cheap-search-inner .search-inner-left {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eeeeee;
+}
+.cheap-search .cheap-search-inner .search-inner-left .search-text {
+  padding: 0 26px;
+  font-size: 14px;
+  background: url(../images/cheap-icon-search.svg) no-repeat 10px center;
+  background-size: 16px 16px;
+  background-color: #ffffff;
+  outline: none;
+}
+.cheap-search .cheap-search-inner .search-inner-right {
+  width: 30px;
+  height: 100%;
+  text-align: center;
+  line-height: .6rem;
+  position: absolute;
+  top: 0;
+  right: 0.05rem;
+}
+.cheap-search .cheap-search-inner .search-inner-right a {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+.cheap-banner {
+  margin: .1rem 0;
+}
+.cheap-shop-list .cheap-container {
+  font-size: 14px;
+  margin: 0 auto;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product {
+  height: 100%;
+  position: relative;
+  padding: 8px 0 8px 135px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-left {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-left img {
+  width: 130px;
+  height: 130px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right {
+  width: 100%;
+  float: left;
+  padding: 0 0.05rem;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-discoun {
+  color: #fc353a;
+  line-height: 30px;
+  font-size: 24px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-discoun i {
+  font-size: 16px;
+  font-style: normal;
+  margin-right: 0.05rem;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-discoun em {
+  font: normal 12px normal;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-discoun del {
+  color: #a8a8a8;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-progress {
+  color: #fc565a;
+  margin-top: 5px;
+  position: relative;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-progress .progress {
+  float: left;
+  width: 100px;
+  height: 16px;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: #ffb7b7;
+  overflow: hidden;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-progress .progress .progress-inner {
+  height: 100%;
+  border-radius: 10px;
+  background-color: red;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-progress .bar > i > span {
+  font-style: normal;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  top: -1px;
+  left: 38px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .product-progress .bar > b {
+  font-weight: normal;
+  margin-left: 0.1rem;
+  font-size: 0.14rem;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .get-coupon {
+  margin-top: 18px;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .get-coupon a {
+  padding: 5px 5px;
+  display: inline-block;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .get-coupon > a:first-child {
+  color: #fc353a;
+  border: 1px dashed #fc353a;
+}
+.cheap-shop-list .cheap-container .cheap-product-list .all-product .content-right .get-coupon > a:last-child {
+  float: right;
+  background-color: #ff5e5d;
+  border-radius: 5px;
+  color: #fff;
+}
+.cheap-rocket {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #808080;
+  border-radius: 50%;
+  position: fixed;
+  right: 0.2rem;
+  bottom: 0.5rem;
+  z-index: 999;
+  display: none;
+}
+.cheap-rocket .cheap-rocket-inner {
+  width: 100%;
+  height: 100%;
+  background: url(../images/cheap-rocket.svg) no-repeat center center;
+  background-size: 22px auto;
+}
+.footer_tool {
+  margin-top: .2rem;
+  width: 100%;
+  background: #fff;
+}
+.footer_tool .tools a {
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  font-size: .28rem;
+  line-height: .68rem;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+  border-left: none;
+}
+.footer_tool .tools a:nth-of-type(3) {
+  width: 40%;
+  border-right: none;
+}
+.footer_tool .copyright {
+  background: #efefef;
+  text-align: center;
+  padding: .3rem 0;
+  font-size: .24rem;
+  color: #666;
+}
+.footer_tool .copyright p a {
+  display: inline-block;
+}
+.footer_tool .copyright p a.app {
+  color: red;
+}
+.footer_tool .copyright p:nth-of-type(2) {
+  line-height: .28rem;
+}

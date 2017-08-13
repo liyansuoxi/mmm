@@ -1,0 +1,117 @@
+    @import "media.less";
+    @import "base.less";
+    .DD-Detail-container {
+        padding: .04rem .1rem;
+        font-size: .16rem;
+        line-height: .24rem;
+        /* 详情部分开始 */
+        .detail-content {
+            .con-title {
+                font-size: .18rem;
+                margin: .1rem auto .05rem auto;
+                font-weight: 800;
+                text-align: left;
+                text-align-last: left;
+                word-break: break-all;
+                color: #5a5a5a;
+            }
+        }
+        h4 {
+            color: #ff6c00;
+            font-size: .16rem;
+        }
+        .con-info {
+            margin: .12rem auto;
+            color: #999999;
+            font-size: .12rem;
+            line-height: .24rem;
+            span {
+                margin-right: .04rem;
+            }
+            span:nth-of-type(1) {
+                margin: 0 .04rem;
+            }
+        }
+        .detail-show {
+            .con-picwrap {
+                float: right;
+                width: 1.24rem;
+                height: 1.24rem;
+                margin: 12px auto auto 10px;
+                overflow: hidden;
+                img {
+                    width: 1.24rem;
+                    height: 1.24rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .golink {
+            a {
+                margin: .2rem .1rem;
+                background: #FF9000;
+                height: .3rem;
+                border-radius: 4px;
+                line-height: .3rem;
+                text-align: center;
+                font-size: .14rem;
+                color: #ffffff;
+            }
+        }
+        .MMB-WeChat {
+            img {
+                width: 95%;
+                margin: .2rem auto;
+            }
+        }
+        .detail-comment {
+            border-top: 1px solid #ccc;
+            .tit {
+                font-size: .16rem;
+                padding: .06rem .08rem;
+            }
+            .reply {
+                padding: .06rem .08rem;
+                .form {
+                    width: 98%;
+                    margin: 0px auto;
+                    padding: 4px 0 0 4px;
+                    border: 2px solid #ECEAE8;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    position: relative;
+                    #ctl00_ContentBody_txt_nr {
+                        width: 100%;
+                        resize: none;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        border: none;
+                        line-height: .22rem;
+                        font-size: .14rem;
+                        outline: 0;
+                        color: #666;
+                        height: .68rem;
+                    }
+                    .ctrl {
+                        background-color: #fbfbfb;
+                        height: 36px;
+                        margin-left: -4px;
+                        border-top: solid 1px #f2f2f2;
+                        input {
+                            position: absolute;
+                            right: -2px;
+                            bottom: -2px;
+                            background: #ff841d;
+                            border: 2px solid #ff841d;
+                            width: 100px;
+                            height: 39px;
+                            color: #fff;
+                            outline: 0;
+                            border-radius: 0 0 2px 0;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }

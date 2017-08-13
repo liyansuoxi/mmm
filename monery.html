@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/monery6.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <!--项目的大盒子-->
+    <div class="mmm_monery">
+        <!--头部-->
+        <div class="monery_header">
+            <div class="mh_back">
+                <a href="#">
+                    <</a>
+            </div>
+            <h1>省钱控-最新优惠</h1>
+                <div class="mh_download">
+                    <a href="#"></a>
+                </div>
+        </div>
+        <!--内容-->
+        <div class="mmm_container">
+            <ul id="ul">
+                <!--<li>
+                    <a href="#">
+                        <div class="mmm_container_left"><img src="http://apic.zuyushop.com/cuxiaoPic/20178/2017080009071463268.jpg" alt=""></div>
+                        <div class="mmm_container_right">
+                            <div class="commodity">
+                                <span class="name">移动端凑单品：海天 鲜味 生抽 1.28L</span>
+                                <span class="price">10.9元</span>
+                            </div>
+                            <div class="tianmao">天猫商城 | 08-03 09:07</div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+</body>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/scrollTop.js"></script>
+<!--模版-->
+<script type="text/html" id="template">
+    {{each result}}
+    <li>
+        <a href="./money_datial.html?productid={{$value.productId}} ">
+            <div class="mmm_container_left">
+                {{@$value.productImgSm}}
+            </div>
+            <div class="mmm_container_right">
+                <div class="commodity">
+                    <span class="name">{{$value.productName}}</span>
+                    <span class="price">{{$value.productPinkage}}</span>
+                </div>
+                <span class="tianmao">{{$value.productFrom}}{{$value.productTime}}</span>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    //获取数据
+    $(function (){
+        var pageid = 1;
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getmoneyctrl',
+            type: 'get',
+            data: { "pageid":pageid},
+            success: function (data) {
+                console.log(data);
+                $('#ul').prepend(template("template", data));
+            }
+        })
+
+
+        //回到顶部
+        //设置定时器
+        // var timer = null;
+        // var leader = 0;
+        // $("#return_Top").click(function () {
+        //     timer = setInterval(function () {
+        //         //步长
+        //         var step = (0 - leader) / 10;
+        //         step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        //         //赋值
+        //         leader = leader + step;
+        //         window.scrollTo(0, leader);
+        //         //清除定时器
+        //         if (leader === 0) {
+        //             clearInterval(timer);
+        //         }
+        //     });
+        // })
+
+
+        // 设置懒加载模式
+    function lazyload() {
+        //设置手指触摸的起始位置
+        var startY;
+        //弹簧 的长度
+        var string = 100;
+        var timerid;
+        var distance;
+        //设置弹簧的长度
+        $("#ul").on("touchstart", function (event) {
+            //判断手指按下的坐标
+            if (event.targetTouches.length > 1) {
+                return;
+            }
+            // 记录手指按下的的位置
+            startY = event.targetTouches[0].clientY;
+        })
+        //手指移动
+        $("#ul").on("touchmove", function (event) {
+            if (event.targetTouches.length > 1) {
+                return;
+            }
+            //记录当前移动的坐标
+            var moveY = event.targetTouches[0].clientY;
+            //当前移动的距离
+            distance = moveY - startY;
+            if (distance > string) {
+                distance = string;
+                //设置懒加载请求数据
+                $(this).css({
+                    "transition": "all 0.5",
+                    "transform": "translateY(" + distance + "px)"
+                })
+            }
+
+        })
+        // 手指移开
+        $("#ul").on("touchend", function (event) {
+            if (event.changedTouches > 1) {
+                return;
+            }
+            if (distance == string) {
+                pageid++;
+
+            }
+            var num = 1;
+            timerid = setInterval(function () {
+                // console.log(1);
+                num++;
+                $(".load_state").css({
+                    "transform": "rotateZ(" + num + "deg)",
+                })
+            }, 5);
+
+            $.ajax({
+                url: "http://139.199.192.48:9090/api/getmoneyctrl",
+                type: "get",
+                data: {
+                    "pageid": pageid,
+                },
+                success: function (data) {
+                    distance = 0;
+                    $("#ul").css({
+                        "transition": "all 1s",
+                        "transform": "translateY(" + distance + "px)"
+                    })
+                    // 获取数据渲染界面
+                    console.log(data);
+                    console.log(pageid)
+                    $("#ul").prepend(template('template', data));
+                    clearInterval(timerid);
+                }
+            })
+
+
+        })
+
+    }
+    lazyload();
+    })
+    
+     //封装
+        // function scroll() {
+        //     return {
+        //         top: window.pageYOffset || document.documentElement.scrollTop,
+        //         left: window.pageXOffset || document.documentElement.scrollLeft
+        //     }
+        // }
+
+</script>
+
+</html>

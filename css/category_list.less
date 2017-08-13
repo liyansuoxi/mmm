@@ -1,0 +1,307 @@
+
+
+@import "zp_base.less";
+@import "media.less";
+
+
+@border-color: #c4c4c4;
+
+
+
+html, body {
+    height: 100%;
+    background-color: #efefef;
+}
+
+
+/* 最外层包裹层 */
+.mmm-bj {
+    font-size: .12rem;
+    height: 1000px;
+
+    /* 遮罩层 */
+    > .mask {
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 1;
+    }
+}
+
+/* 头部 tab 栏 */
+.tab-nav {
+    margin-top: 1.2rem;
+    ul {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+
+        li {
+            box-sizing: border-box;
+            text-align: center;
+
+            a {
+                @height: .4rem;
+
+                height: @height;
+                width: 100%;
+                line-height: @height;
+                font-size: .14rem;
+                color: #5a5a5a;
+            }
+        }
+
+        li.active {
+            a {
+                color: #ed0000;
+            }
+        }
+
+        li:last-of-type {
+            border-right: none;
+        }
+    }
+}
+
+/* 商品列表信息栏 */
+.product-list {
+    background-color: #fff;
+    width: 100%;
+
+    /* 解决滑动事件不能使用的问题 */
+    touch-action: none;
+    
+    .loading {
+        border-bottom: 1px solid @border-color;
+
+        //.filter-mix::before {
+        //    background: @color-12;
+        //}
+        //.filter-mix::after {
+        //    background: @color-13;
+        //}
+    }
+    
+    ul {
+        overflow: hidden;
+        width: 100%;
+
+        li {
+            width: 100%;
+            height: 1.25rem;
+            border-bottom: 1px solid @border-color;
+            position: relative;
+
+            /* 遮罩层 */
+            .mask {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            >div.clearfix {
+                @width: 1.2rem;
+
+                display: block;
+                width: 70%;
+                padding-left: @width + .2rem;
+                box-sizing: content-box;
+
+                /* 内容区 */
+                .content {
+                    font-size: .16rem;
+                    color: #333333;
+                    padding-top: .1rem;
+
+                    p {
+                        width: 100%;
+                        margin: .05rem 0;
+                    }
+
+                    p.txt {
+                        margin-top: 0;
+                        padding-top: .05rem;
+
+                        /* 不换行 + 省略号 */
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    p.title {
+                        height: .208rem;
+                    }
+
+                    p.price {
+                        font-size: .18rem;
+                        color: #ed0000;
+                    }
+
+                    p.msg {
+                        font-size: .12rem;
+                        color: #a1a1a1;
+                        line-height: .24rem;
+
+                        span.pull-right {
+
+                            //margin-right: @width + .3rem;
+                        }
+                    }
+                }
+
+                /* 坐标的产品图片 */
+                .avatar {
+                    padding-right: .1rem;
+                    padding-left: .1rem;
+                    margin-left: -@width - .2rem;
+
+                    img {
+                        width: @width;
+                        height: @width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 控制页码 */
+.pageCon {
+    padding-top: .2rem;
+
+    .row {
+        div {
+            text-align: center;
+            font-size: .14rem;
+
+            button {
+                padding: 0 .15rem;
+                box-shadow: 0 0 1px #666;
+                border-radius: .05rem;
+                background-color: #d4d4d4;
+                background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+
+                line-height: .32rem;
+                font-size: .14rem;
+            }
+
+            select {
+                width: .82rem;
+                height: .33rem;
+                border-radius: .03rem;
+                padding-left: .19rem;
+                font-size: .16rem;
+            }
+        }
+    }
+}
+
+/* 友情链接 */
+.link {
+    padding-left: .1rem;
+    padding-top: .25rem;
+    line-height: .24rem;
+    
+    h3 {
+        font-weight: normal;
+    }
+
+    a {
+        margin: .1rem 0;
+        color: #5a5a5a;
+    }
+}
+
+/* 筛选 */
+.filter {
+    overflow: auto;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    left: -80%;
+    top: 0;
+    z-index: 2;
+
+    /* 标题 */
+    h2.f-titler {
+        @height: .44rem;
+
+        height: @height;
+        border-bottom: 2px solid #e0e0e0;
+        font-size: .2rem;
+        text-align: center;
+        letter-spacing: .1rem;
+        line-height: @height;
+        font-weight: normal;
+
+        span {
+            height: 100%;
+            padding: 0 .2rem;
+            line-height: @height;
+            text-align: center;
+        }
+    }
+
+    /* form表单选项 */
+    form {
+        font-size: .12rem;
+        background-color: #fff;
+        padding: 0 3%;
+        line-height: .48rem;
+
+        /* 小标题 */
+        h3 {
+            padding-top: .1rem;
+            font-size: .16rem;
+            font-weight: normal;
+
+            span {
+                color: @theme-color;
+                line-height: .48rem;
+                font-size: .12rem;
+                margin-left: .1rem;
+            }
+            span.icon-chevron-down,
+            span.icon-chevron-up {
+                color: black;
+                font-size: .16rem;
+                margin-right: .1rem;
+            }
+        }
+
+        /* 表单选项 */
+        ul {
+            overflow: hidden;
+
+            li {
+                width: 33.3%;
+                float: left;
+                padding-right: .2rem;
+                margin-bottom: .1rem;
+                box-sizing: border-box;
+
+                input {
+                    width: 100%;
+                    padding-top: .02rem;
+                    border-radius: .08rem;
+                    background-color: #eceff1;
+                    line-height: .28rem;
+                    color: #5a5a5a;
+                    font-size: .13rem;
+                }
+
+                input.active {
+                    background-color: #ff5000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+

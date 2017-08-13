@@ -1,0 +1,375 @@
+
+
+// 占位用的背景色
+@color-1: #2bc8ed;
+@color-2: #22b6e7;
+@color-3: #19a4e1;
+@color-4: #63d1c4;
+@color-5: #4fc1b0;
+@color-6: #3bb19c;
+@color-7: #f48f63;
+@color-8: #f2724f;
+@color-9: #ef553b;
+@color-10: #414a4e;
+@color-11: #74848b;
+@color-12: #a1aaae;
+@color-13: #d3d9dc;
+@color-14: #eceff1;
+
+
+/* 页面主题色 */
+@theme-color: #ff5000;
+
+
+/* 去除 padding margin */
+body, h1, h2, h3, h4, ul, p, ol {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+    width: 100%;
+    font: .12rem "Microsoft Yahei";
+}
+  
+a {
+	text-decoration: none;
+	color: inherit;
+
+	/* 清除移动端高亮 */
+	line-height: normal;
+	display: block;
+	//移动端a标签点击高亮
+	-webkit-tap-highlight-color: transparent;
+
+    /* 解决不能使用 swipe 的问题 */
+    touch-action: none;
+}
+
+li, ol {
+	list-style: none;
+}
+input, button {
+	outline: none;
+	border-style: none;
+}
+
+button {
+	border-style: none;
+}
+
+/* 解决 3px 留白问题 */
+img {
+	vertical-align: middle;
+	
+}
+
+/* 清除浮动 */
+.clearfix::after {
+	content: "";
+	display: block;
+	height: 0;
+}
+.clearfix::after {
+	clear: both;
+}
+
+/* 设置字体颜色 */
+.red {
+	color: red;
+}
+
+
+/* 不换行 + 省略号 */
+.p-nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 绝对定位居中 */
+.postion-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+/*=======================公共部分============================*/
+
+
+/* 广告栏 */
+.banner-app {
+    background-color: #434343;
+    font-size: .12rem;
+    padding: .1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    /* logo */
+    .logo {
+        a {
+            img {
+                width: .6rem;
+                height: .6rem;
+                margin-top: .03rem;
+            }
+        }
+    }
+
+    /* 中间文字部分 */
+    .content {
+        padding-left: .1rem;
+
+        h2 {
+            padding-top: .03rem;
+            color: #fff;
+            font-size: .16rem;
+            font-weight: normal;
+        }
+
+        p {
+            margin: .05rem 0;
+            color: #fee6c2;
+        }
+    }
+
+    /* 右边下载按钮 */
+    .download {
+        #download-app {
+            padding: .06rem .1rem;
+            background-color: #6db110;
+            border-radius: .04rem;
+            color: #fff;
+            position: absolute;
+            right: .1rem;
+            bottom: .1rem;
+            font-size: .14rem;
+        }
+    }
+
+    /* 关闭按钮 */
+    a.close {
+        width: .2rem;
+        height: .2rem;
+        background-color: black;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        top: .1rem;
+        right: .1rem;
+        font-size: .12rem;
+        text-align: center;
+        text-indent: .005rem;
+        line-height: .2rem;
+    }
+}
+
+/* 头部 logo 栏 */
+header {
+    /* logo 栏 */
+    .logo {
+        height: .5rem;
+        border-bottom: 1px solid black;
+        background-color: @color-10;
+    }
+
+    /* 搜索栏 */
+    .search {
+        box-sizing: content-box;
+        height: .3rem;
+        padding: .1rem;
+        border-bottom: 1px solid #e6e6e6;
+        background-color: @color-12;
+    }
+}
+
+/* 底部栏 */
+footer {
+    margin-top: .25rem;
+    padding-bottom: .25rem;
+    color: #5a5a5a;
+    background-color: #efefef;
+
+    .tools {
+        @border: #c4c4c4;
+
+        border-top: 1px solid @border;
+        border-bottom: 1px solid @border;
+
+        a {
+            box-sizing: border-box;
+            border-right: 1px solid @border;
+            text-align: center;
+            padding: .1rem 0;
+            font-size: .14rem;
+        }
+        a:last-of-type {
+            border-right: none;
+        }
+    }
+
+    .copyRight {
+        margin-top: .2rem;
+        text-align: center;
+
+        p > a {
+            display: inline-block;
+            margin-top: .05rem;
+        }
+    }
+}
+
+/* 底部应用打开 */
+.open-localapp {
+	@height: .6rem;
+
+	box-sizing: border-box;
+	width: 100%;
+	height: @height;
+	position: fixed;
+	bottom: 0;
+	background-color: #faf8f5;
+	padding-top: (@height - .41rem) / 2;
+
+	/* 关闭按钮 */
+	a.pull-left {
+		box-sizing: content-box;
+		width: .21rem;
+		height: .21rem;
+		padding: (@height - .41rem) / 2 .12rem .2rem .12rem;
+		background-color: rgba(0, 0, 0, .3);
+		background-origin: content-box;
+		background-clip: content-box;
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: .21rem;
+	}
+
+	/* applogo 和 打开按妞 */
+	.logo {
+
+		//  a 标签中不能嵌套 a 标签
+		img {
+			width: .41rem;
+			height: .41rem;
+		}
+	}
+
+	/* 中间文字部分 */
+	.content {
+		padding-left: .1rem;
+		color: #888;
+		line-height: .20rem;
+
+		h2 {
+			font-weight: normal;
+			font-size: .18rem;
+		}
+		p {
+			font-size: .12rem;
+		}
+	}
+
+	/* 立即打开 */
+	#open-app {
+		@width: .6rem;
+		@height: .25rem;
+		width: auto;
+		height: @height;
+		display: block;
+		padding: 0 .05rem;
+		margin-top: .06rem;
+		margin-right: .05rem;
+		background-color: #ff7700;
+		box-shadow: inset 0 -2px #ff5500;
+		border-radius: .04rem;
+		color: #fff;
+		text-align: center;
+		line-height: @height;
+		font-size: .12rem;
+	}
+}
+
+
+
+/* 加载中动画 */
+.loading {
+
+    @top: .05rem;
+    @width: 85%;
+    @r_1: .26rem;
+    @r_2: .2rem;
+    @bgc_1: @color-3;
+    @bgc_2: @color-9;
+
+    display: none;
+    width: 100%;
+    padding: 0 .2rem;
+    margin: auto;
+    overflow: hidden;
+    height: @r_1 + @top * 2;
+
+    .filter-mix {
+        position: absolute;
+        //top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: @width;
+        height: @r_1 + @top * 2;
+    }
+
+    .filter-mix::before {
+        content: "";
+        position: absolute;
+        width: @r_1;
+        height: @r_1;
+        border-radius: 50%;
+        background: @bgc_1;
+        top: @top;
+        left: 0;
+        z-index: 3;
+        box-sizing: border-box;
+        animation: filterBallMove 10s ease-out infinite;
+    }
+
+    .filter-mix::after {
+        content: "";
+        position: absolute;
+        width: @r_2;
+        height: @r_2;
+        border-radius: 50%;
+        background: @bgc_2;
+        top: (@r_1 - @r_2) / 2 + @top;
+        right: 0;
+        z-index: 2;
+        animation: filterBallMove2 10s ease-out infinite;
+    }
+
+    @keyframes filterBallMove {
+        50% {
+            left: @width;
+        }
+        to {
+            z-index: 2;
+        }
+    }
+
+    @keyframes filterBallMove2 {
+        50% {
+            right: @width;
+        }
+        to {
+            z-index: 3;
+        }
+    }
+
+}
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/gsshopt.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+</head>
+<body>
+    <!--上方头部由组长写-->
+    <!--搜索栏开始-->
+    <div class="gsshop_search">
+        <div class="left fl">
+            <ul>
+                京东<b>▲</b>
+                <li>天猫</li>
+                <li>一号店</li>
+            </ul>
+            <ul>
+                华北<b>▲</b>
+                <li>天猫</li>
+                <li>一号店</li>
+            </ul>
+            <ul>
+                全部价格<b>▲</b>
+                <li>天猫</li>
+                <li>一号店</li>
+            </ul>
+        </div>
+        <div class="right fr">搜索</div>
+    </div>
+    <!--搜索栏结束-->
+    <!--凑单gsshop_main部分开始-->
+    <div class="gsshop_main">
+        <ul>
+            <!--模板-->
+
+            <!--模板-->
+        </ul>
+    </div>
+
+
+
+    <!--凑单gsshop_main部分结束-->
+</body>
+<script type='text/html' id='template_gsshopt'>
+    {{each result}}
+    <li>
+        <div><img src="{{$value.productImg}}" alt=""></div>
+        <p>{{$value.productName}}</p>
+        <div>
+            <span>{{$value.productPrice}}</span>
+            <span>去凑单</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script>
+    window.onload = function () {
+        //    1,先获取默认的商店id
+
+        reset1(0, 0)
+
+        // 开始绑定事件;
+
+
+
+
+
+
+
+
+        //封装重新加载的列表
+        function reset1(num1, num2) {
+            $.ajax({
+                url: 'http://139.199.192.48:9090/api/getgsproduct?',
+                type: 'get',
+                data: 'shopid=' + num1 + '&areaid=' + num2,
+                success: function (data) {
+                    var result = template('template_gsshopt', data)
+                    console.log(result)
+                    $('.gsshop_main ul').append(result);
+                }
+            })
+        }
+        //封装重新加载的列表
+    }
+
+</script>
+
+
+
+</html>

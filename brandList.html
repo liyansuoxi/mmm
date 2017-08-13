@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>brand_list.html</title>
+    <link rel="stylesheet" href="./css/brand_list.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <div class="view">
+        <header>
+            <a class="header_logo" href="index.html"></a>
+            <a class="header_app" href="index.html"></a>
+        </header>
+        <div class="search">
+            <div class="search_inner">
+                <input type="text" name="search" value="" placeholder="请输入你想比价的商品">
+                <a href="javascript:;">搜索</a>
+            </div>
+        </div>
+        <main>
+            <section class="section1">
+                <div class="clearfix top-link">
+                    <a class="fl" href="index.html">首页</a>
+                    <span class="fl">></span>
+                    <a class="fl" href="./brand_title.html">品牌排行</a>
+                    <span class="fl">></span>
+                    <a class="fl" href="javascript:;"><span class="brand-name"></span>哪个牌子好</a>
+                </div>
+                <div class="top-title">
+                    <h3><span class="brand-name"></span>哪个牌子好</h3>
+                </div>
+                <div class="list">
+                </div>
+            </section>
+            <section class="section2">
+                <div class="top-title">
+                    <h3><span class="brand-name"></span>销量排行</h3>
+                </div>
+                <div class="sold">
+                    <div class="no-data">
+                        惨到一件也没卖出去
+                    </div>
+                </div>
+            </section>
+            <section class="section3">
+                <div class="top-title">
+                    <h3><span class="brand-name"></span>最有用的用户评论</h3>
+                </div>
+                <div class="con">
+                    <div class="no-data">
+                        暂无评论
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./js/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/scrollTop.js"></script>
+<script src="./js/back_top.js"></script>
+<script>
+    var move = new Back_top();
+</script>
+<script type="text/html" id="rank">
+    {{each result}}
+    <div class="list-items">
+        <a href="category_list.html?categoryid={{$value.categoryId}}">
+            <p>{{$value.brandName}}</p>
+            <span>{{$value.brandInfo}}</span>
+            <em></em>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="sold">
+    {{each result}}
+    <div class="sold-items">
+        <a href="category_detail.html?brandId={{$value.brandId}}">
+            <div class="pic fl">
+            </div>
+            <div class="info fl">
+                <p class="des">{{$value.productName}}</p>
+                <p class="price clearfix">
+                    <span class="pri fl">{{$value.productPrice}}</span>
+                    <span class="star fr">★★★★★</span>
+                </p>
+                <p class="other">
+                    <em>{{$value.productQuote}}</em>
+                    <em>{{$value.productCom}}</em>
+                </p>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="con">
+    {{each result}}
+    <div class="con-items">
+        <div class="con-title clearfix">
+            <div class="con-pic fl">
+                <img src="" alt="">
+            </div>
+            <div class="con-des fl">
+                <span></span>
+            </div>
+        </div>
+        <div class="con-info">
+            <a href="javascript:;">
+                <div class="user clearfix">
+                    <span class="user-star fl">{{$value.comName}}<em> ★★★★★</em></span>
+                    <span class="days fr">{{$value.comTime}}</span>
+                </div>
+                <div class="text">
+                    {{$value.comContent}}
+                </div>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script src="./js/brand_list.js"></script>
+
+</html>

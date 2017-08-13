@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/template-web.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+</head>
+
+<body>
+    <!--上方头部-->
+    <div class="gsshop_head">
+        <span><</span>
+        <span>凑品单</span>
+    </div>
+    <!--搜索栏开始-->
+    <div class="gsshop_search">
+        <div class="left fl">
+            <span>
+                京东 <b>▼</b>
+            </span>
+           
+            <span>
+                华北 <b>▼</b>
+            </span>
+           
+            <span>
+                1元 <b>▼</b>
+            </span>
+           
+        </div>
+        <div class="right fr">
+            
+        </div>
+        <div class="gsshop_searchbutton hide ">
+            <div>
+                <input type="text" placeholder="搜索你想要的凑品单">
+                <input type="button" value="搜索">
+            </div>
+            <div>
+                <h4>排序</h4>
+                <p>
+                    <span>
+                        销量
+                    </span>
+                    <span>
+                        价格↑
+                    </span>
+                    <span>
+                        价格↓
+                    </span>
+                </p>
+            </div>
+            <div>
+                <h4>分类</h4>
+                <p>
+                    <span>
+                        全部
+                    </span>
+                    <span>
+                        家居
+                    </span>
+                    <span>
+                        数码
+                    </span>
+                    <span>
+                        办公
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        全部
+                    </span>
+                    <span>
+                        家居
+                    </span>
+                    <span>
+                        数码
+                    </span>
+                    <span>
+                        办公
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <ul class="shop hide">
+            <!--<li>京东</li>
+            <li>天猫</li>
+            <li>一号店</li>-->
+        </ul>
+        <ul class="area hide">
+
+        </ul>
+        <ul class="price hide">
+
+        </ul>
+        <!--<ul class="shop hide">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>-->
+
+    </div>
+    <!--搜索栏结束-->
+    <!--凑单gsshop_main部分开始-->
+    <div class="gsshop_main">
+        <ul>
+            <!--模板-->
+
+            <!--模板-->
+        </ul>
+    </div>
+
+    <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+
+    <!--凑单gsshop_main部分结束-->
+</body>
+<script src="./js/scrollTop.js"></script>
+<script src="./js/back_top.js"></script>
+    <script>
+        var move = new Back_top();
+    </script>
+<script type='text/html' id='template_gsshopt'>
+    {{each result}}
+    <li>
+        <div><img src="{{$value.productImg}}" alt=""></div>
+        <p>{{$value.productName}}</p>
+        <div>
+            <span>{{$value.productPrice}}</span>
+            <span>去凑单</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+
+<script type='text/html' id='template_shop'>
+    {{each result}}
+    <li class='{{$value.shopId}}'>
+        {{$value.shopName}}
+    </li>
+    {{/each}}
+</script>
+
+
+<script type='text/html' id='template_area'>
+    {{each result}}
+    <li class='{{$value.areaId}}'>
+        {{$value.areaName}}
+    </li>
+    {{/each}}
+</script>
+
+
+
+
+<script>
+    window.onload = function () {
+        //    1,先获取默认的商店id
+        var num1 = 0;
+        var num2 = 0;
+        reset1(num1, num2);
+
+        // 开始绑定事件;
+        // $('.gsshop_search span').click(function(){
+        //    var index=$(this).index();
+        //    $('.gsshop_search ul').eq(index).toggleClass('hide')
+        // })
+
+        // 第一个span标签开始
+        $('.gsshop_search span').eq(0).tap(function () {
+           
+           
+            //初始化
+            $('.gsshop_search ul').html('');
+            if ($('.gsshop_search .gsshop_searchbutton').hasClass('hide')) {
+                
+            }else{
+                $('.gsshop_search .gsshop_searchbutton').addClass('hide');
+            };
+            
+            if ($('.gsshop_search .shop').hasClass('hide')) {
+                $('.gsshop_search .shop').removeClass('hide');
+                $('.gsshop_search span b').eq(0).html('▲');
+            } else {
+                $('.gsshop_search .shop').addClass('hide');
+                 $('.gsshop_search span b').eq(0).html('▼');
+            }
+            //初始化
+            $.ajax({
+                url: 'http://139.199.192.48:9090/api/getgsshop',
+                type: 'get',
+                success: function (data) {
+                    // console.log(data)
+                    var result = template('template_shop', data)
+                    // console.log(result)
+                    $('.gsshop_search .shop').html(result);
+                    $('.gsshop_search').on('click', '.gsshop_search  .shop  li', function () {
+                        $('.gsshop_search span').eq(0).html($(this).html()+'<b>▼</b>');
+                        $('.gsshop_search .shop').addClass('hide');
+                        num1 = $(this).attr("class");
+                        $('.gsshop_search ul').html('');
+                        reset1(num1, num2);
+                    })
+                }
+            })
+        })
+
+
+        // 第一个span标签结束
+
+
+        // 第二个span标签开始
+        $('.gsshop_search span').eq(1).tap(function () {
+            
+            //初始化
+                $('.gsshop_search ul').html('');
+            if (!$('.gsshop_search .gsshop_searchbutton').hasClass('.hide')) {
+                $('.gsshop_search .gsshop_searchbutton').addClass('hide');
+            }
+            if ($('.gsshop_search .area').hasClass('hide')) {
+                $('.gsshop_search .area').removeClass('hide');
+                $('.gsshop_search span b').eq(1).html('▲');
+            } else {
+                $('.gsshop_search .area').addClass('hide');
+                $('.gsshop_search span b').eq(1).html('▼');
+            }
+
+
+
+        
+            //初始化
+            $.ajax({
+                url: 'http://139.199.192.48:9090/api/getgsshoparea',
+                type: 'get',
+                success: function (data) {
+                    // console.log(data)
+                    var result = template('template_area', data)
+                    // console.log(result)
+                    $('.gsshop_search .area').html(result);
+
+                    $('.gsshop_search').on('click', '.gsshop_search .area  li', function () {
+
+                        $('.gsshop_search span').eq(1).html($(this).html().slice(9,11)+'<b>▼</b>');
+                         $('.gsshop_search .area').addClass('hide');
+                        num2 = $(this).attr("class");
+                        $('.gsshop_search ul').html('');
+                        reset1(num1, num2);
+                      
+                      
+
+                    })
+
+
+                }
+            })
+        })
+        // 第二个span标签结束
+
+
+
+        // 第三个span标签开始
+
+        $('.gsshop_search span').eq(2).tap(function () {
+           
+            //初始化
+            $('.gsshop_search ul').html('');
+            if (!$('.gsshop_search .gsshop_searchbutton').hasClass('.hide')) {
+                $('.gsshop_search .gsshop_searchbutton').addClass('hide');
+            }
+            if ($('.gsshop_search .price').hasClass('hide')) {
+                $('.gsshop_search .price').removeClass('hide');
+                 $('.gsshop_search span b').eq(2).html('▲');
+            } else {
+                $('.gsshop_search .price').addClass('hide');
+                $('.gsshop_search span b').eq(2).html('▼');
+            }
+
+
+
+            
+            //初始化
+            var result = '<li>全部价格</li><li>1-3元</li><li>3-5元</li><li>5-10元</li><li>10-15元</li><li>15元以上</li>';
+            $('.gsshop_search .price').html(result);
+            $('.gsshop_search').on('click', '.gsshop_search .price  li', function () {
+                $('.gsshop_search ul').html('');
+                $('.gsshop_search span').eq(2).html($(this).html()+'<b>▼</b>');
+                 $('.gsshop_search .price').addClass('hide');
+
+            })
+
+        })
+
+
+        // 第三个span标签结束
+
+
+        // 搜索栏
+        $('.gsshop_search .right').tap(function () {
+            $('.gsshop_search ul').html('');
+            $('.gsshop_search .gsshop_searchbutton').toggleClass('hide');
+        })
+
+
+
+
+
+
+        //封装重新加载的列表
+        function reset1(num1, num2) {
+            $.ajax({
+                url: 'http://139.199.192.48:9090/api/getgsproduct?',
+                type: 'get',
+                data: 'shopid=' + num1 + '&areaid=' + num2,
+                success: function (data) {
+                    $('.gsshop_main ul').html('');
+                    var result = template('template_gsshopt', data)
+                    // console.log(result)
+                    $('.gsshop_main ul').append(result);
+                }
+            })
+        }
+        //封装重新加载的列表
+    }
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <!--国内折扣列表开始  -->
+    <div class="DD-list">
+        <ul class="DD-list-container clearfix">
+            <!-- <li class="DD-list-item">
+                <a href="zhekou.aspx?id=1735518" title="美之高（MZG）  金属五层储物架 不易弯曲、经久耐用 69">
+                    <div class="item-img">
+                        <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20170803/09/adfe6f8afd3c45b2842dc5e64258ab3b.jpg">
+                    </div>
+                    <div class="item-title">美之高（MZG） 金属五层储物架 不易弯曲、经久耐用</div>
+                    <div class="item-subtit">69</div>
+                    <div class="item-info">
+                        <div class="info-mall">天猫商城 | 2017/8/3 9:47</div>
+                    </div>
+                </a>
+            </li>
+            <li class="DD-list-item">
+                <a href="zhekou.aspx?id=1735518" title="美之高（MZG）  金属五层储物架 不易弯曲、经久耐用 69">
+                    <div class="item-img">
+                        <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20170803/09/adfe6f8afd3c45b2842dc5e64258ab3b.jpg">
+                    </div>
+                    <div class="item-title">美之高（MZG） 金属五层储物架 不易弯曲、经久耐用</div>
+                    <div class="item-subtit">69</div>
+                    <div class="item-info">
+                        <div class="info-mall">天猫商城 | 2017/8/3 9:47</div>
+                    </div>
+                </a>
+            </li>
+            <li class="DD-list-item">
+                <a href="zhekou.aspx?id=1735518" title="美之高（MZG）  金属五层储物架 不易弯曲、经久耐用 69">
+                    <div class="item-img">
+                        <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20170803/09/adfe6f8afd3c45b2842dc5e64258ab3b.jpg">
+                    </div>
+                    <div class="item-title">美之高（MZG） 金属五层储物架 不易弯曲、经久耐用</div>
+                    <div class="item-subtit">69</div>
+                    <div class="item-info">
+                        <div class="info-mall">天猫商城 | 2017/8/3 9:47</div>
+                    </div>
+                </a>
+            </li>
+            <li class="DD-list-item">
+                <a href="zhekou.aspx?id=1735518" title="美之高（MZG）  金属五层储物架 不易弯曲、经久耐用 69">
+                    <div class="item-img">
+                        <img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20170803/09/adfe6f8afd3c45b2842dc5e64258ab3b.jpg">
+                    </div>
+                    <div class="item-title">美之高（MZG） 金属五层储物架 不易弯曲、经久耐用</div>
+                    <div class="item-subtit">69</div>
+                    <div class="item-info">
+                        <div class="info-mall">天猫商城 | 2017/8/3 9:47</div>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+    </div>
+    <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                    <a href="javascript:void(0)" class="scrollTop col-xm-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+
+    <script type="text/html" id="template">
+        {{each result}}
+        <li class="DD-list-item">
+            <a href="inlanddiscountDetail.html?productId={{$value.productId}}" title="{{$value.productName}} {{$value.productPrice}}">
+                <div class="item-img">
+                      {{@$value.productImg}}  
+                </div>
+                <div class="item-title">{{$value.productName}}</div>
+                <div class="item-subtit">{{$value.productPrice}}</div>
+                <div class="item-info">
+                    <div class="info-mall">{{$value.productFrom}} | {{$value.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./js/template-web.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./js/back_top.js"></script>
+    <script src="./js/scrollTop.js"></script>
+    <script>
+        var move = new Back_top();
+    </script>
+    <script>
+        $(function () {
+            $.ajax({
+                url: "http://139.199.192.48:9090/api/getinlanddiscount",
+                success: function (data) {
+                    console.log(data);
+                    $(".DD-list-container").html(template("template", data));
+                    var imgList = document.querySelectorAll(".item-img");
+                }
+            });
+        });
+    </script>
+    <!--国内折扣列表结束  -->
+</body>
+
+</html>

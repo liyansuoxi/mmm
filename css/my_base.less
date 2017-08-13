@@ -1,0 +1,82 @@
+
+
+// 颜色变量
+@color-1: #2bc8ed;
+@color-2: #22b6e7;
+@color-3: #19a4e1;
+@color-4: #63d1c4;
+@color-5: #4fc1b0;
+@color-6: #3bb19c; 
+@color-7: #f48f63;
+//@color-8: #fs724f;
+@color-8: #f2724f;
+@color-9: #ef553b;
+@color-10: #414a4e;
+@color-11: #74848b;
+@color-12: #a1aaae;
+@color-13: #d3d9dc;
+@color-14: #eceff1;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 去除 padding margin */
+body, h1, h2, h3, h4, ul, p {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+  
+a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	//移动端a标签点击高亮
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+li {
+    list-style: none;
+}
+input, button {
+    outline: none;
+    border-style: none;
+}
+
+button {
+    border-style: none;
+}
+
+/* 解决 3px 留白问题 */
+img {
+    vertical-align: middle;
+    
+}
+
+
+/* 浮动 */
+.pull-left,.fl {
+    float: left;
+}
+.pull-right,.fr {
+    float: right;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* 设置字体颜色 */
+.red {
+    color: red;
+}
+

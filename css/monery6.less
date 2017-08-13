@@ -1,0 +1,157 @@
+//导入样式文件
+@import "./media.less";
+
+//初始化
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+
+ 
+//头部区域
+.monery_header{
+    width: 100%;
+    height: .44rem;
+    background: #ff841d;
+    position: relative;
+    .mh_back{
+        width: .5rem;
+        height: 100%;
+        margin-left: .1rem;
+        position: absolute;
+        a{
+            font-size: .3rem;
+            position: absolute;
+            left:0;
+            top: center;
+            color: white;
+        }
+    }
+    h1{
+        font-size: .2rem;
+        font-weight: bold;
+        text-align: center;
+        height: .44rem;
+        line-height: .44rem;
+        color: white;
+    }
+    .mh_download a{
+        position: absolute;
+        top: 0;
+        right: .2rem;
+        
+        background: url('../images/header_app.png')no-repeat;
+        width: .68rem;
+        height: 100%;
+        
+    }
+}
+
+
+//内容区域
+.mmm_container{
+    li{
+        width: 100%;
+        height: 1.2rem;
+        //background-color: red;
+        padding: .14rem .08rem;
+        //position: relative;
+        a{
+            width: 100%;
+            //height: .72rem;
+            height: .92rem;
+            //background-color: red;
+            .mmm_container_left{
+                float: left;
+                height: 100%;
+                img{
+                    width: 1rem;
+                    height: 100%;
+                    //vertical-align: top;
+                }
+            }
+            .mmm_container_right{
+                width: 70%;
+                height: 100%;
+                float: left;
+                margin-left: 0.1rem;
+                //position: absolute;
+                .commodity{
+                    font-size: .14rem;
+                    
+                    .name{
+                        color: black;
+                    }
+                    .price{
+                    color: #ff6c00;
+                    }
+                }
+                .tianmao{
+                    float:left;
+                    color: #a1a1a1;
+                    font-size: .12rem;
+                    margin-top: .22rem;
+                }
+            }
+        }
+    }
+}
+
+
+//底部(头部)
+.foot_top{
+    height: .36rem;
+    border-top: .01rem solid #5a5a5a;
+    border-bottom: .01rem solid #5a5a5a;
+    font-size: 14px;
+    background-color: #efefef;;
+    a:nth-child(1),a:nth-child(2){
+        width: 30%;
+        border-right: .01rem solid #5a5a5a;
+        text-align: center;
+    }
+    a:nth-child(3){
+        width: 40%;
+        text-align: center;
+    }
+    a{
+        float: left;
+        height: .34rem;
+        line-height: .34rem;
+        img{
+            width: .15rem;
+            height: .15rem;
+        }
+    }
+}
+
+//底部其它
+.footer{
+    font-size: .12rem;
+    padding: .15rem 0rem;
+    width: 100%;
+    background-color: #efefef;
+    div{
+        width: 100%;
+        //text-align: center;
+        .footer_one{
+            //text-align: center;
+            margin-left: 1.8rem;
+            color:red;
+        }
+    }
+    p{
+        text-align: center;
+    }
+}

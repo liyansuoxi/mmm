@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- 默认用 ie-edge 打开 -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+
+    <title>慢慢买-全网比价*折扣</title>
+
+    <!-- 配置信息 -->
+    <script src="./js/config.js"></script>
+
+    <!-- 工具包 -->
+    <script src="./js/common.js"></script>
+
+    <!-- 渲染页面需要的请求发送请求 -->
+    <script>
+        // 缓存机制
+        window.cache = createCache();
+
+        // 发送请求
+        var xhr = new XMLHttpRequest();
+        xhr.open("get", _URL.commodityList + "?categoryid=" + (getQueryString("categoryid") || 0) + "&pageid=1");
+        xhr.send(null);
+
+        xhr.onload = function (data) {
+            // 缓存数据
+            window.cache("data", JSON.parse(data.currentTarget.responseText));
+        };
+    </script>
+
+    <!-- 字体样式 -->
+    <link rel="stylesheet" href="./css/font-awesome.min.css"/>
+    <!-- 主要 -->
+    <link rel="stylesheet" href="./css/category_list.css"/>
+    <link rel="stylesheet" href="./css/com.css">
+
+    <!-- zepto -->
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/fx.js"></script>
+    <script src="./lib/zepto/fx_methods.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+
+    <!-- template 插件 -->
+    <script src="./lib/template/template-web.js"></script>
+
+</head>
+<body>
+
+<!-- 最外层包裹层 -->
+<div class="mmm-bj">
+
+    <!-- 头部 logo 栏 和 搜索栏 -->
+   <header>
+            <a class="header_logo" href="index.html"></a>
+            <a class="header_app" href="index.html"></a>
+        </header>
+        <div class="search">
+            <div class="search_inner">
+                <input type="text" name="search" value="" placeholder="请输入你想比价的商品">
+                <a href="javascript:;">搜索</a>
+            </div>
+        </div>
+
+    <!-- tab 切换栏 -->
+    <div class="tab-nav container-fulid">
+
+        <ul class="clearfix row">
+            <li class="tab-nav-item col-xs-3 active">
+                <a href="javascript:void(0)">综合</a>
+            </li>
+            <li class="tab-nav-item col-xs-3">
+                <a href="javascript:void(0)">销量</a>
+            </li>
+            <li class="tab-nav-item col-xs-3">
+                <a href="javascript:void(0)">价格</a>
+            </li>
+            <li class="tab-nav-item col-xs-3">
+                <a href="javascript:void(0)"><span class="icon-filter"></span>筛选</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 商品列表-->
+    <div class="product-list">
+
+        <!-- 加载动画 -->
+        <!--<div class="loading" style="display: block">-->
+        <div class="loading">
+            <div class="filter-mix"></div>
+        </div>
+
+        <!-- 列表 -->
+        <ul id="p-list"></ul>
+    </div>
+
+    <!-- 控制页码 -->
+    <div class="pageCon container-fulid" data-target="#p-list">
+        <div class="row clearfix">
+            <div class="prev col-xs-4">
+                <button data-target="prev" data-page="1">上一页</button>
+            </div>
+            <div class="page col-xs-4">
+                <select data-target="page" name="page"></select>
+            </div>
+            <div class="next  col-xs-4">
+                <button data-target="next" data-page="1">下一页</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 友情链接 -->
+    <div class="link">
+        <h3>相关链接</h3>
+        <a href="javascript:void(0)">电视机十大品牌</a>
+        <a href="javascript:void(0)">电视机口碑大全</a>
+    </div>
+
+    <!-- 底部栏 -->
+    <footer>
+        <div class="tools container-fulid clearfix">
+            <div class="row">
+                <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                <a href="javascript:void(0)" class="scrollTop col-xs-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+            </div>
+        </div>
+        <div class="copyRight">
+            <p>
+                <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                <a href="http://m.manmanbuy.com">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+        </div>
+    </footer>
+
+    <!-- 底部应用打开 -->
+    <div class="open-localapp">
+
+        <!-- 关闭 -->
+        <a href="javascript:void(0)" class="close icon-remove pull-left" data-target="bottom"></a>
+
+        <!-- logo -->
+        <div class="logo pull-left">
+            <img src="./images/bj_logo.png" alt=""/>
+        </div>
+
+        <!-- 内容 -->
+        <div class="content pull-left">
+            <h2>慢慢买</h2>
+            <p>全网比价网,查历史价</p>
+        </div>
+
+        <!-- 本地应用打开 -->
+        <div class="download pull-right">
+            <a href="#" id="open-app" data-target="link">立即打开</a>
+        </div>
+    </div>
+
+    <!-- codeContinue 添加一个遮罩层 -->
+    <div class="mask"></div>
+
+</div>
+
+<!-- 筛选 -->
+<div class="filter">
+
+    <!-- 标题 -->
+    <h2 class="f-titler">筛选 <span class="icon-remove pull-right" data-target="left"></span></h2>
+
+    <!-- 表单 -->
+    <form action=""></form>
+</div>
+
+
+
+<!-- 商品信息列表 -->
+<script type="text/html" id="show">
+{{each}}
+    <li class="pl-item">
+
+        <!-- 遮罩层 -->
+        <!--<a href="javascript:void(0)" class="mask"></a>-->
+        <a href="./category_detail.html?productId={{$value.productId}}" class="mask"></a>
+
+        <!-- a 标签跳转 -->
+        <div class="clearfix">
+
+            <!-- 两列自适应布局 -->
+            <div class="avatar pull-left">
+                {{@$value.productImg}}
+            </div>
+            <div class="content">
+                <p class="txt">{{$value.productName}}</p>
+                <p class="title">{{$value.brandName}}</p>
+                <p class="price">{{$value.productPrice}}</p>
+                <p class="msg clearfix">
+                    <span class="pull-left">{{$value.productQuote}}</span>
+                    <span class="pull-right">{{$value.productCom}}</span>
+                </p>
+            </div>
+        </div>
+    </li>
+{{/each}}
+</script>
+
+
+<!-- javascript 文件-->
+<script src="./js/zp-category.js"></script>
+<script src="./js/category_list.js"></script>
+
+</body>
+</html>

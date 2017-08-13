@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+
+</head>
+<body>
+    <div class="view">
+        <!--头部导航及搜索框 -->
+        <header>
+            <a class="header_logo" href="index.html"></a>
+            <a class="header_app" href="index.html"></a>
+        </header>
+        <div class="search">
+            <div class="search_inner">
+                <input type="text" name="search" value="" placeholder="请输入你想比价的商品">
+                <a href="javascript:;">搜索</a>
+            </div>
+        </div>
+
+
+
+        <div class="menu">
+            <ul class="menuItems clearfix">
+
+            </ul>
+        </div>
+        <div class="recommend">
+            <div class="recommend_title">
+                <a href="moneyctrl.html" class="clearfix">
+                    <span>超值折扣推荐</span>
+                     <img src="./images/ic_more.png" alt="">  
+                </a>
+            </div>
+            <div class="recommend_list">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="moreBar">
+                <a href="moneyctrl.html"> 更多优惠>></a>
+            </div>
+        </div>
+        <div class="ranking">
+            <div class="ranking_title">
+                <a href="brandTitle.html" class="clearfix">
+                    <span>品牌排行</span>
+                     <img src="./images/ic_more.png" alt="">  
+                </a>
+            </div>
+        </div>
+
+        <!--底部工具栏  -->
+         <!-- <div class="footer_tool">
+            <div class="tools clearfix">
+                <a href="">登录</a>
+                <a href="">注册</a>
+                <a href="">返回顶部</a>
+            </div>
+            <div class="copyright">
+                <p><a class="app">手机APP下载</a><a>慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>  -->
+        <!-- 底部栏 -->
+        <footer>
+            <div class="tools container-fulid clearfix">
+                <div class="row">
+                    <a href="javascript:void(0)" class="col-xs-4">登录</a>
+                    <a href="javascript:void(0)" class="col-xs-4">注册</a>
+                        <a href="javascript:void(0)" class="scrollTop col-xs-4" data-target="scrollTo"><span class="icon icon-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p>
+                    <a class="red" href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a>
+                    <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <a href="http://m.manmanbuy.com">m.manmanbuy.com</a>
+            </div>
+        </footer>
+    </div>
+    <script type='text/html' id='indexMenu'>
+        <li id='{{_id}}'>
+            <a href="{{titlehref}}">
+               {{@img}}
+                <p>{{name}}</p>
+            </a>
+        </li>
+    </script>
+    <script type='text/html' id='moneyCtrl'>
+        <li>
+            <a href="money_datial.html?productid={{productId}}" class="clearfix">
+                <div class="pic clearfix">
+                    {{@productImgSm}}
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        {{productName}} 
+                        <span>{{productPinkage}}</span>
+                    </div>
+                    <div class="info clearfix">
+                        <span class="mail">{{productFrom}} | {{productTime}}</span>
+                        <span class="comment">0</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </script>
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/zepto/event.js"></script>
+    <script src="./lib/zepto/ajax.js"></script>
+    <script src="./lib/zepto/selector.js"></script>
+    <script src="./lib/zepto/touch.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/scrollTop.js"></script>
+    <script src="./js/back_top.js"></script>
+    <script>
+        var move = new Back_top();
+    </script>
+</body>
